@@ -1,9 +1,9 @@
-<?php include_once "./inc/header.php"; ?>
+<?php include_once "./inc/admin_header.php"; ?>
 <body>
 
     <div id="wrapper">
 
-       <?php include_once "./inc/navigation.php"; ?>
+       <?php include_once "./inc/admin_navigation.php"; ?>
 
         <div id="page-wrapper">
 
@@ -28,7 +28,36 @@
                                 </div> 
                             </form>
                         </div>
+                         <div class="col-xs-6">
+                                <?php 
+                                    $query = "SELECT * FROM categories";
+                                    $catResult = mysqli_query($connection, $query);    
+                                ?>
 
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Category Title</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <?php 
+                                                while($row = mysqli_fetch_assoc($catResult)) {
+                                                    $cat_id = $row['cat_id'];
+                                                    $cat_title = $row['cat_title'];
+                                                    echo "<tr>";
+                                                    echo "<td>$cat_id</td>";
+                                                    echo "<td>$cat_title</td>";
+                                                }
+                                                echo "</tr>";
+                                            ?>
+                                        </tr>
+                                    </tbody>
+                                    
+                                </table>
+                            </div>
                     </div>
                 </div>
                 <!-- /.row -->
@@ -41,4 +70,4 @@
 
     </div>
 
-    <?php include_once "./inc/footer.php"; ?>
+    <?php include_once "./inc/admin_footer.php"; ?>

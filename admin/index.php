@@ -1,9 +1,9 @@
-<?php include_once "./inc/header.php"; ?>
+<?php include_once "./inc/admin_header.php"; ?>
 <body>
 
     <div id="wrapper">
 
-       <?php include_once "./inc/navigation.php"; ?>
+       <?php include_once "./inc/admin_navigation.php"; ?>
 
         <div id="page-wrapper">
 
@@ -28,4 +28,4 @@
 
     </div>
 
-    <?php include_once "./inc/footer.php"; ?>
+    <?php include_once "./inc/admin_footer.php"; ?>
