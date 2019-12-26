@@ -6,6 +6,7 @@ ob_start();
 ?> 
 
 <?php include_once "./../inc/database.php"; ?>
+<?php include_once "./inc/function.php"; ?>
 
 <!DOCTYPE html>
 <html lang="en">
