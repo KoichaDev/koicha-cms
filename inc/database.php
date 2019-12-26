@@ -6,9 +6,12 @@
 
     $connection = mysqli_connect(HOST, USERNAME, PASSWORD, DB_NAME);
 
-    if($connection) {
-        echo 'Database connected!';
-    } else {
-        echo 'Something went wrong: ' . mysqli_error();
+    if(!$connection) {
+        die('Something went wrong: ' . mysqli_error());
+    } 
+    mysqli_set_charset($connection, 'utf8');
+
+    function closeDB($dbConnection) {
+        mysqli_close($dbConnection);
     }
 ?>

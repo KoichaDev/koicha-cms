@@ -1,3 +1,5 @@
+
+<?php include_once "./inc/database.php"; closeDB($connection); ?>
 <!-- Footer -->
         <footer>
             <div class="row">
