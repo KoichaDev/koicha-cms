@@ -22,7 +22,6 @@
                         <?php 
                             if(isset($_POST['submit'])) {
                                 $cat_title = $_POST['cat_title'];
-
                                 if($cat_title == "" || empty($cat_title)) {
                                     echo "<p>This field should not be empty!</p>";
                                 } else {
@@ -45,33 +44,16 @@
                                     <input type="submit" name="submit" class="btn btn-primary" value="Add Category">
                                 </div> 
                             </form>
-                            <form action="" method="POST">
-                                <div class="form-group">
-                                    <label for="cat-title">Edit Category</label>
-                                    <?php 
-                                        
+                           
+                            <div class="form-group">
+                                <?php 
 
-                                        if(isset($_GET['edit'])) {
-                                            $cat_id = $_GET['edit'];
-                                            $query = "SELECT * FROM categories WHERE cat_id = ? ";
-                                            $stmt = mysqli_prepare($connection, $query);
-                                            mysqli_stmt_bind_param($stmt, "i", $cat_id);
-                                            mysqli_stmt_execute($stmt);
-                                            $result = mysqli_stmt_get_result($stmt);
-                                            while($row = mysqli_fetch_assoc($result)) {
-                                                $cat_id = $row['cat_id'];
-                                                $cat_title = $row['cat_title'];
-                                    ?>
-                                            <input type="text" name="cat_title" id="" class="form-control" value="<?php if(isset($cat_title)){ echo $cat_title; } ?>">
-                                    <?php
-                                            }
-                                        }
-                                    ?>
-                                </div> 
-                                <div class="form-group">
-                                    <input type="submit" name="edit" class="btn btn-primary" value="Update Category">
-                                </div> 
-                            </form>
+                                if(isset($_GET['edit'])) {
+                                    $cat_id = $_GET['edit'];
+                                    include_once "./inc/update_categories.php";
+                                }
+                                ?>
+                            </div> 
                         </div>
                          <div class="col-xs-6">
                                 <table class="table table-bordered table-hover">
@@ -112,7 +94,6 @@
                                                     // This is going to refresh the page after we delete a category. 
                                                     // Otherwise, we have to delete and refresh the website to see the result
                                                     header("Location: categories.php");
-
                                                 }
                                             ?>
                                         </tr>
