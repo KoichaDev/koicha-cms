@@ -1,3 +1,10 @@
+<?php
+// This will output the buffering. We need to use it for redirecting users, or pieces of coding or application
+// This function is buffering our request in the headers of the script, so when we are done with the script. 
+// It will send everything at the same time
+ob_start(); 
+?> 
+
 <?php include_once "./../inc/database.php"; ?>
 
 <!DOCTYPE html>
