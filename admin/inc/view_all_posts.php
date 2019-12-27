@@ -38,8 +38,22 @@
                 echo "<td>$post_tags</td>";
                 echo "<td>$post_comments_count</td>";
                 echo "<td>$post_date</td>";
+                echo "<td><a href='posts.php?delete={$post_id}'>Delete</a></td>";
+                echo "</tr>";
             }
-            echo "</tr>";
         ?>
     </tbody>
 </table>
+<?php 
+    if(isset($_GET['delete'])) {
+        $post_id = $_GET['delete'];
+        $query = "DELETE FROM post WHERE post_id = ?";
+        $stmt = mysqli_prepare($connection, $query);
+        mysqli_stmt_bind_param($stmt, "i", $post_id);
+        if(!mysqli_stmt_execute($stmt)) {
+            die('QUERY FAILED ' . mysqli_error($connection));
+        }
+        // Will refresh the posts.php when delete right away
+        header("Location: posts.php");
+    }
+?>
