@@ -32,7 +32,20 @@
                 echo "<td>$post_id</td>";
                 echo "<td>$post_author</td>";
                 echo "<td>$post_title</td>";
-                echo "<td>$post_category_id</td>";
+                
+                $query = "SELECT * FROM categories WHERE cat_id = ?";
+                $stmt = mysqli_prepare($connection, $query);
+                mysqli_stmt_bind_param($stmt, "i", $post_category_id);
+                mysqli_stmt_execute($stmt);
+                $result = mysqli_stmt_get_result($stmt);
+                while($row = mysqli_fetch_assoc($result)) {
+                    $cat_id = $row['cat_id'];
+                    $cat_title = $row['cat_title'];
+                    echo "<td>$cat_title</td>";
+                }
+
+
+
                 echo "<td>$post_status</td>";
                 echo "<td><img src='./../img/$post_image' alt='image' width='100'></td>";
                 echo "<td>$post_tags</td>";

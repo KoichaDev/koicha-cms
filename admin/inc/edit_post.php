@@ -75,7 +75,6 @@
         <label for="title">Post Title</label>
         <input type="text" name="title" id="title" class="form-control" value="<?php echo $post_title; ?>">
     </div>
-
     <div class="form-group">
         <label for="post_category">Category Title</label>
         <select name="post_category" class="form-control form-control-lg" id="post_category">
@@ -91,7 +90,6 @@
         ?>
         </select>
     </div>
-
     <div class="form-group">
         <label for="post_category">Post Category ID</label>
         <input type="text" name="post_category_id" id="post_category" class="form-control" value="<?php echo $post_category_id; ?>">
