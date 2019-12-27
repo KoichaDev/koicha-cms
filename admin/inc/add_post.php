@@ -11,16 +11,15 @@
         $post_tags = $_POST['post_tags'];
         $post_content = $_POST['post_content'];
         $post_date = date('d-m-y');
-        $post_comment_count = 4;
         
         // PHP In built function. We have to use temporarily post image to display on the web what file it is
         // $post_image will upload to the final destination
         move_uploaded_file($post_image_temp, "../img/$post_image"); 
         // now() is a function for SQL to get the current date time today
-        $query = "INSERT INTO post(post_category_id, post_title, post_author, post_date, post_image, post_content, post_tags, post_comment_count, post_status) 
-                  VALUES(?, ?, ?, now(), ?, ?, ?, ?, ?)";
+        $query = "INSERT INTO post(post_category_id, post_title, post_author, post_date, post_image, post_content, post_tags, post_status) 
+                  VALUES(?, ?, ?, now(), ?, ?, ?, ?)";
         $stmt = mysqli_prepare($connection, $query);
-        mysqli_stmt_bind_param($stmt, "isssssis", $post_category_id, $post_title, $post_author, $post_image, $post_content, $post_tags, $post_comment_count, $post_status);
+        mysqli_stmt_bind_param($stmt, "issssis", $post_category_id, $post_title, $post_author, $post_image, $post_content, $post_tags, $post_status);
         if(!mysqli_stmt_execute($stmt)) {
             die('QUERY FAILED .' . mysqli_error($connection));
         }

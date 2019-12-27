@@ -20,7 +20,12 @@
                     $post_date = $row['post_date'];
                     $post_img = $row['post_image'];
                     $post_content = substr($row['post_content'], 0, 300);
+                    $post_status = $row['post_status'];
 
+                    if($post_status !== "Published") {
+                        // If the post status is not published, then it will show nothing on the page
+                    } else {
+                    
                     ?>
 
                 <h1 class="page-header">
@@ -45,6 +50,7 @@
                 <a class="btn btn-primary" href="post.php?p_id=<?php echo $post_id; ?>">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
                 <hr>                
                 <?php
+                    }
                 }
                 ?>
                 </div>
