@@ -22,7 +22,7 @@
                             }
                             switch($source) {
                                 case 'add_post'; include "./inc/add_post.php"; break;
-                                case '100'; echo "Nice 100"; break;
+                                case 'edit_post'; include "./inc/edit_post.php"; break;
                                 case '200'; echo "Nice 200"; break;
                                 default: include "./inc/view_all_posts.php"; break;
                             }
