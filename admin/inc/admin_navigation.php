@@ -38,10 +38,10 @@
                         <a href="javascript:;" data-toggle="collapse" data-target="#posts-dropdown"><i class="fa fa-fw fa-arrows-v"></i> Posts <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="posts-dropdown" class="collapse">
                             <li>
-                                <a href="posts.php">Add Posts</a>
+                                <a href="posts.php?source=add_post">Add Posts</a>
                             </li>
                             <li>
-                                <a href="view_posts.php">View All Posts</a>
+                                <a href="./posts.php">View All Posts</a>
                             </li>
                         </ul>
                     </li>

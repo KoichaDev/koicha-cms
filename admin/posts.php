@@ -14,34 +14,19 @@
                             Welcome to admin
                             <small>Author</small>
                         </h1>
-                        <table class="table table-bordered table-hover">
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Author</th>
-                                    <th>Title</th>
-                                    <th>Category</th>
-                                    <th>Status</th>
-                                    <th>Image</th>
-                                    <th>Tags</th>
-                                    <th>Comments</th>
-                                    <th>Date</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>10</td>
-                                    <td>John Doe</td>
-                                    <td>Bootstrap Framework</td>
-                                    <td>Bootstrap</td>
-                                    <td>Status</td>
-                                    <td>Image</td>
-                                    <td>Tags</td>
-                                    <td>Comments</td>
-                                    <td>2019-01-02</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <?php 
+                            if(isset($_GET['source'])) {
+                                $source = $_GET['source'];
+                            } else {
+                                $source = "";
+                            }
+                            switch($source) {
+                                case 'add_post'; include "./inc/add_post.php"; break;
+                                case '100'; echo "Nice 100"; break;
+                                case '200'; echo "Nice 200"; break;
+                                default: include "./inc/view_all_posts.php"; break;
+                            }
+                        ?>
                     </div>  
                 </div>
                 <!-- /.row -->
