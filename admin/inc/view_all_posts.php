@@ -43,9 +43,6 @@
                     $cat_title = $row['cat_title'];
                     echo "<td>$cat_title</td>";
                 }
-
-
-
                 echo "<td>$post_status</td>";
                 echo "<td><img src='./../img/$post_image' alt='image' width='100'></td>";
                 echo "<td>$post_tags</td>";

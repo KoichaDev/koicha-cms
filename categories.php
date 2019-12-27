@@ -11,8 +11,14 @@
             <!-- Blog Entries Column -->
             <div class="col-md-8">    
             <?php 
-                $query = "SELECT * FROM post ORDER BY post_id DESC"; 
-                $postResult = mysqli_query($connection, $query);
+                if(isset($_GET['categories'])) {
+                    $post_category_id = $_GET['categories'];
+                }
+                $query = "SELECT * FROM post WHERE post_category_id = ? ";
+                $stmt = mysqli_prepare($connection, $query);
+                mysqli_stmt_bind_param($stmt, "i", $post_category_id);
+                mysqli_stmt_execute($stmt); 
+                $postResult = mysqli_stmt_get_result($stmt);
                 while($row = mysqli_fetch_assoc($postResult)) {
                     $post_id = $row['post_id'];
                     $post_title = $row['post_title'];
