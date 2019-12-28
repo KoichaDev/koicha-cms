@@ -103,9 +103,9 @@
         <input type="text" name="post_status" id="post_status" class="form-control" value="<?php echo $post_status; ?>">
     </div>
     <div class="form-group">
-        <label for="post_image">Post Image</label>
+        <label for="post-image">Post Image</label>
         <img width='100' src="../img/<?php echo $post_image; ?>" alt ="Image">
-        <input type="file" name="image" id="post_image">
+        <input type="file" name="image" id="post-image">
     </div>
     <div class="form-group">
         <label for="post_tags">Post Tags</label>
