@@ -14,12 +14,11 @@
                     <div class="col-lg-12">
                         <h1 class="page-header">
                             Welcome to admin
-                            <small><?php echo $_SESSION['username'] ?></small>
+                            <small>Author</small>
                         </h1>
                     </div>
                 </div>
                 <!-- /.row -->
-
             </div>
             <!-- /.container-fluid -->
 
