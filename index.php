@@ -23,20 +23,17 @@
                     $post_status = $row['post_status'];
 
                     // Will display the posts if the post status is "published"
-                    if($post_status == "published") {
+                    if($post_status === "published") {
                     ?>
 
-                <h1 class="page-header">
-                    Page Heading 
-                    <small>Secondary Text</small>
-                </h1>
+
 
                 <!-- First Blog Post -->
-                <h2>
+                <h1>
                     <a href="post.php?p_id=<?php echo $post_id; ?>"><?php echo $post_title; ?></a>
-                </h2>
+                </h1>
                 <p class="lead">
-                    by <a href="index.php"><?php echo $post_author; ?></a>
+                    by <small><a href="index.php"><?php echo $post_author; ?></a></small>
                 </p>
                 <p><span class="glyphicon glyphicon-time"></span> Posted on <?php echo $post_date; ?></p>
                 <hr>

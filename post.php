@@ -28,17 +28,12 @@
 
                     ?>
 
-                <h1 class="page-header">
-                    Page Heading 
-                    <small>Secondary Text</small>
-                </h1>
-
                 <!-- First Blog Post -->
-                <h2>
-                    <a href="#"><?php echo $post_title; ?></a>
-                </h2>
+                <h1>
+                    <?php echo $post_title; ?>
+                </h1>
                 <p class="lead">
-                    by <a href="index.php"><?php echo $post_author; ?></a>
+                    <small>By <a href="index.php"><?php echo $post_author; ?></a></small>
                 </p>
                 <p><span class="glyphicon glyphicon-time"></span> Posted on <?php echo $post_date; ?></p>
                 <hr>

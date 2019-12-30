@@ -37,7 +37,7 @@
                 echo "<td><a href='users.php?source=view_all_users&change_to_admin={$user_id}'>Admin</a></td>";
                 echo "<td><a href='users.php?source=view_all_users&change_to_sub={$user_id}'>Subscriber</a></td>";
                 echo "<td><a href='users.php?source=edit_user&p_id={$user_id}'>Edit</a></td>";
-                echo "<td><a href='users.php?source=view_all_users&delete={$user_id}'>Delete</a></td>";
+                echo "<td><a href='users.php?source=view_all_users&delete={$user_id}' id='delete-user'>Delete</a></td>";
                 echo "</tr>";
             }
         ?>

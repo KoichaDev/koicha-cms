@@ -26,7 +26,6 @@
         
         if($username === $db_username && $password === $db_password) {
             session_start(); // Telling the server to prepare the session for us
-
             // We want to access the 'username' from the database and match client session we did on the query
             // $db_username;
             $_SESSION['username'] = $db_username;

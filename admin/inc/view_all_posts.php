@@ -21,6 +21,41 @@
                         die('Something went wrong' . mysqli_error($connection));
                     } 
                 break;
+                case 'duplicate': 
+                    // We want to make query to check the post id from the check box value
+                    // This is because the check box value is saved in an array
+                    $query = "SELECT * FROM post WHERE post_id = ?";
+                    $stmt = mysqli_prepare($connection, $query);
+                    mysqli_stmt_bind_param($stmt, "i", $check_box_values_id);
+                    if(!mysqli_stmt_execute($stmt)) {
+                        die('Something went wrong' . mysqli_error($connection));
+                    }
+
+                    $duplicate_result = mysqli_stmt_get_result($stmt);
+                    
+                    while($row = mysqli_fetch_assoc($duplicate_result)) {
+                    $post_id = $row['post_id'];
+                    $post_author = $row['post_author'];
+                    $post_title = $row['post_title'];
+                    $post_category_id = $row['post_category_id'];
+                    $post_status = $row['post_status'];
+                    $post_image = $row['post_image'];
+                    $post_content = $row['post_content'];
+                    $post_tags = $row['post_tags'];
+                    $post_comments_count = $row['post_comment_count'];
+                    $post_date = $row['post_date'];
+                    }
+
+                    // After the post ID has been checked, then we want to insert which one to duplicate the page
+                    $query = "INSERT INTO post(post_category_id, post_title, post_author, post_date, post_image, post_content, post_tags, post_status) 
+                              VALUES(?, ?, ?, now(), ?, ?, ?, ?)";
+                    $stmt = mysqli_prepare($connection, $query);
+                    mysqli_stmt_bind_param($stmt, "issssis", $post_category_id, $post_title, $post_author, $post_image, $post_content, $post_tags, $post_status);
+                    if(!mysqli_stmt_execute($stmt)) {
+                        die('QUERY FAILED .' . mysqli_error($connection));
+                    }
+
+                break;
                 case 'delete': 
                     $query = "DELETE FROM post WHERE post_id = ?";
                     $stmt = mysqli_prepare($connection, $query);
@@ -40,6 +75,7 @@
         <select name="select_options" class="form-control form-control-sm" id="select-all-check-boxes">
             <option value="">Select Option</option>
             <option value="published">Published</option>
+            <option value="duplicate">Duplicate</option>
             <option value="draft">Draft</option>
             <option value="delete">Delete</option>
         </select>
@@ -102,7 +138,7 @@
                         echo "<td>$cat_title</td>";
                     }
                     
-                    echo "<td>$post_status</td>";
+                    echo "<td>" . ucfirst($post_status) . "</td>";
                     echo "<td><img src='./../img/$post_image' alt='image' width='100'></td>";
                     echo "<td>$post_tags</td>";
                     echo "<td>$post_comments_count</td>";

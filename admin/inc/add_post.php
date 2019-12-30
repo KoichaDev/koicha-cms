@@ -74,8 +74,15 @@
     <div class="form-group">
         <label for="post-status">Post Status</label>
         <select name="post_status" id="post-status">
+        <?php 
+            if($post_status === "") {
+                    echo "<option value='draft'>Draft</option>";
+                }
+        ?>
             <option value='<?php echo $post_status; ?>'><?php echo ucfirst($post_status); ?></option>
             <?php 
+                
+
                 if($post_status === 'published') {
                     echo "<option value='draft'>Draft</option>";
                 } else {

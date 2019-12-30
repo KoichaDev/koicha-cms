@@ -32,15 +32,15 @@
     <form action="" role="form" method="POST">
         <div class="form-group">
         <label for="comment_author">Author</label>
-            <input type="text" class="form-control" id="comment_author" name="comment_author">
+            <input type="text" class="form-control" id="comment_author" name="comment_author" required>
         </div>
         <div class="form-group">
             <label for="comment_email">Email</label>
-            <input type="email" class="form-control" id="comment_email" name="comment_email">
+            <input type="email" class="form-control" id="comment_email" name="comment_email" required>
         </div>
         <div class="form-group">
             <label for="comment_content">Your Comment</label>
-            <textarea id="comment_content" class="form-control"  name="comment_content" cols="30" rows="10"></textarea>
+            <textarea id="comment_content" class="form-control"  name="comment_content" cols="30" rows="10" required></textarea>
         </div>
 
         <button type="submit" class="btn btn-primary" name="create_comment">Submit</button>

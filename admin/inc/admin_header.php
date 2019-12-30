@@ -66,5 +66,6 @@ if(!isset($_SESSION['user_role'])) {
     <!-- Google's Material column charts API-->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="./js/posts.js" defer></script>
+    <script src="./js/users.js" defer></script>
 
 </head>
