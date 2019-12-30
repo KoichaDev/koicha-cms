@@ -11,7 +11,38 @@
             <!-- Blog Entries Column -->
             <div class="col-md-8">    
             <?php 
-                $query = "SELECT * FROM post ORDER BY post_id DESC"; 
+
+                // Here we can set a fixed value how many results we want to get to show the page
+                $display_posts_per_page = 5;
+
+                // We want to get the page value 
+                if(isset($_GET['page'])) {
+                    $page = $_GET['page'];
+                } else {
+                    // If there is not page, then it will be zero, basically our index.php, and we don't get any errors
+                    $page = "";
+                }
+
+                // If we are on the page is 0, basically, that's index.php OR the page is on the pagination number 1
+                if($page === "" || $page == 1) {
+                    // Then we want to set the variable as 0
+                    $page_1 = 0;
+                } else {
+                    // Example if we are on the page 2 has value 2 and then 2 * $display_posts_per_page = e.g.10
+                    // Then we take 10 - 5, then it's 5. The number 5 is the page results we will get
+                    $page_1 = ($page * $display_posts_per_page) - $display_posts_per_page;
+                }
+
+                $count_post_query = "SELECT * FROM post";
+                $find_post_count_result = mysqli_query($connection, $count_post_query);
+                $count = mysqli_num_rows($find_post_count_result);
+
+                // We use the count to find the amount of rows that exist on the database
+                // After that, we use the count and divide a fixed number. 
+                // This number will give us amount of post that will be displayed per pagination
+                $count = ceil($count / $display_posts_per_page);
+
+                $query = "SELECT * FROM post ORDER BY post_id DESC LIMIT $page_1, $display_posts_per_page"; 
                 $postResult = mysqli_query($connection, $query);
                 while($row = mysqli_fetch_assoc($postResult)) {
                     $post_id = $row['post_id'];
@@ -43,11 +74,25 @@
                 <hr>
                 <p><?php echo $post_content; ?></p>
                 <a class="btn btn-primary" href="post.php?p_id=<?php echo $post_id; ?>">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
-                <hr>                
                 <?php
                     }
                 }
                 ?>
+                <hr>                
+
+                <ul class="pager">
+                    <?php 
+                        for($i = 1; $i <= $count; $i++) {
+                            
+                            if($i === (int) $page) {
+                                echo "<li><a class='active-link' href='index.php?page={$i}'>{$i}</a></li>";
+                            } else {
+                                echo "<li><a href='index.php?page={$i}'>{$i}</a></li>";
+                            }
+                        }
+                    
+                    ?>
+                </ul>
                 </div>
                     <!-- Blog Sidebar Widgets Column -->
                 <?php include_once './inc/sidebar.php'; ?>
