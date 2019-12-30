@@ -99,7 +99,8 @@
                 <th>Tags</th>
                 <th>Comments</th>
                 <th>Date</th>
-                <th>Visited</th>
+                <th>Views</th>
+                <th>Reset Views</th>
                 <th>Edit</th>
                 <th>Delete</th>
             </tr>
@@ -147,9 +148,9 @@
                     echo "<td>$post_comments_count</td>";
                     echo "<td>$post_date</td>";
                     echo "<td>$post_view_count</td>";
+                    echo "<td><a href='posts.php?reset={$post_id}'>Reset</a></td>";
                     echo "<td><a href='posts.php?source=edit_post&p_id={$post_id}'>Edit</a></td>";
                     echo "<td><a href='posts.php?delete={$post_id}'>Delete</a></td>";
-
                     echo "</tr>";
                 }
             ?>
@@ -168,5 +169,21 @@
         }
         // Will refresh the posts.php when delete right away
         header("Location: posts.php");
+    }
+
+    // Reset the view counts
+    if(isset($_GET['reset'])) {
+        $post_reset_id = $_GET['reset'];
+        echo $post_reset_id;
+        $query_reset = "UPDATE post SET post_views_count = 0 WHERE post_id = ? ";
+        $stmt = mysqli_prepare($connection, $query_reset);
+        mysqli_stmt_bind_param($stmt, "i", $post_reset_id);
+        if(!mysqli_stmt_execute($stmt)){
+            die('Query to reset views went wrong' . mysqli_error($connection));
+        }
+
+        header("Location: posts.php");
+
+
     }
 ?>
