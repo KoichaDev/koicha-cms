@@ -44,13 +44,14 @@
                     $post_tags = $row['post_tags'];
                     $post_comments_count = $row['post_comment_count'];
                     $post_date = $row['post_date'];
+                    $post_view_count = $row['post_views_count'];
                     }
 
                     // After the post ID has been checked, then we want to insert which one to duplicate the page
-                    $query = "INSERT INTO post(post_category_id, post_title, post_author, post_date, post_image, post_content, post_tags, post_status) 
-                              VALUES(?, ?, ?, now(), ?, ?, ?, ?)";
+                    $query = "INSERT INTO post(post_category_id, post_title, post_author, post_date, post_image, post_content, post_tags, post_status, post_views_count) 
+                              VALUES(?, ?, ?, now(), ?, ?, ?, ?, ?)";
                     $stmt = mysqli_prepare($connection, $query);
-                    mysqli_stmt_bind_param($stmt, "issssis", $post_category_id, $post_title, $post_author, $post_image, $post_content, $post_tags, $post_status);
+                    mysqli_stmt_bind_param($stmt, "issssisi", $post_category_id, $post_title, $post_author, $post_image, $post_content, $post_tags, $post_status, $post_view_count);
                     if(!mysqli_stmt_execute($stmt)) {
                         die('QUERY FAILED .' . mysqli_error($connection));
                     }
@@ -98,6 +99,7 @@
                 <th>Tags</th>
                 <th>Comments</th>
                 <th>Date</th>
+                <th>Visited</th>
                 <th>Edit</th>
                 <th>Delete</th>
             </tr>
@@ -117,6 +119,7 @@
                     $post_tags = $row['post_tags'];
                     $post_comments_count = $row['post_comment_count'];
                     $post_date = $row['post_date'];
+                    $post_view_count = $row['post_views_count'];
                     
                     echo "<tr>";
                     ?>
@@ -143,6 +146,7 @@
                     echo "<td>$post_tags</td>";
                     echo "<td>$post_comments_count</td>";
                     echo "<td>$post_date</td>";
+                    echo "<td>$post_view_count</td>";
                     echo "<td><a href='posts.php?source=edit_post&p_id={$post_id}'>Edit</a></td>";
                     echo "<td><a href='posts.php?delete={$post_id}'>Delete</a></td>";
 

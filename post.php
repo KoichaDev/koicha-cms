@@ -13,7 +13,17 @@
             <?php 
                 if(isset($_GET['p_id'])) {
                     $post_id = $_GET['p_id'];
+
+                // This query will update increment by 1 each time someone views a post through the unique id of the post
+                $view_query = "UPDATE post 
+                               SET post_views_count = post_views_count + 1 
+                               WHERE post_id = ?";
+                $stmt = mysqli_prepare($connection, $view_query);
+                mysqli_stmt_bind_param($stmt, "i", $post_id);
+                if(!mysqli_stmt_execute($stmt)) {
+                    die('View Query went wrong ' . mysqli_error($connection));
                 }
+                
                 $query = "SELECT * FROM post WHERE post_id = ?";
                 $stmt = mysqli_prepare($connection, $query);
                 mysqli_stmt_bind_param($stmt, "i", $post_id); 
@@ -43,6 +53,9 @@
                 <hr>                
                 <?php
                 }
+            } else {
+                header("Location: index.php");
+            }
                 ?>
                 <!-- Blog Comments -->
                 <?php include "./inc/comments.php"; ?>
