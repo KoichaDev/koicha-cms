@@ -24,7 +24,13 @@
             die('QUERY FAILED .' . mysqli_error($connection));
         }
 
-        echo 'Post added!';
+        $query = "SELECT * FROM post"; 
+        $post_result = mysqli_query($connection, $query);
+        while($row = mysqli_fetch_assoc($post_result)) {
+            $post_id = $row['post_id'];
+        }
+
+        echo "<p class='bg-success'>Post Added. <a href='../post.php?p_id={$post_id}'>View post</a></p>";
     }
 
 ?>
@@ -68,9 +74,9 @@
     <div class="form-group">
         <label for="post-status">Post Status</label>
         <select name="post_status" id="post-status">
-            <option value='<?php echo $post_status; ?>'><?php echo $post_status; ?></option>
+            <option value='<?php echo $post_status; ?>'><?php echo ucfirst($post_status); ?></option>
             <?php 
-                if($post_status === 'Published') {
+                if($post_status === 'published') {
                     echo "<option value='draft'>Draft</option>";
                 } else {
                     echo "<option value='published'>Published</option>";
