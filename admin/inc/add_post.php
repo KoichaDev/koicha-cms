@@ -23,6 +23,8 @@
         if(!mysqli_stmt_execute($stmt)) {
             die('QUERY FAILED .' . mysqli_error($connection));
         }
+
+        echo 'Post added!';
     }
 
 ?>
@@ -56,9 +58,25 @@
         <label for="title">Post Author</label>
         <input type="text" name="author" id="title" class="form-control">
     </div>
+    <?php 
+        $query = "SELECT * FROM post";
+        $post_result = mysqli_query($connection, $query);
+        while($row = mysqli_fetch_assoc($post_result)) {
+            $post_status = $row['post_status'];
+        }
+    ?>
     <div class="form-group">
-        <label for="post_status">Post Status</label>
-        <input type="text" name="post_status" id="post_status" class="form-control">
+        <label for="post-status">Post Status</label>
+        <select name="post_status" id="post-status">
+            <option value='<?php echo $post_status; ?>'><?php echo $post_status; ?></option>
+            <?php 
+                if($post_status === 'Published') {
+                    echo "<option value='draft'>Draft</option>";
+                } else {
+                    echo "<option value='published'>Published</option>";
+                }                
+            ?>
+        </select>
     </div>
     <div class="form-group">
         <label for="post_image">Post Image</label>

@@ -38,10 +38,10 @@
                         <a href="javascript:;" data-toggle="collapse" data-target="#posts-dropdown"><i class="fa fa-pencil-square-o"></i> Posts <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="posts-dropdown" class="collapse">
                             <li>
-                                <a href="posts.php?source=add_post">Add Posts</a>
+                                <a href="./posts.php">View All Posts</a>
                             </li>
                             <li>
-                                <a href="./posts.php">View All Posts</a>
+                                <a href="posts.php?source=add_post">Add Posts</a>
                             </li>
                             <li>
                                 <a href="categories.php"><i class="fa fa-tags"></i> Categories</a>
@@ -55,10 +55,10 @@
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-users"></i> Users <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
                             <li>
-                                <a href="users.php?source=add_user">Add Users</a>
+                                <a href="users.php">All Users</a>
                             </li>
                             <li>
-                                <a href="users.php">All Users</a>
+                                <a href="users.php?source=add_user"> Add User</a>
                             </li>
                         </ul>
                     </li>

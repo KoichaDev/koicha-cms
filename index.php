@@ -22,10 +22,8 @@
                     $post_content = substr($row['post_content'], 0, 300);
                     $post_status = $row['post_status'];
 
-                    if($post_status !== "Published") {
-                        // If the post status is not published, then it will show nothing on the page
-                    } else {
-                    
+                    // Will display the posts if the post status is "published"
+                    if($post_status == "published") {
                     ?>
 
                 <h1 class="page-header">

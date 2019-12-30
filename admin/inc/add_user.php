@@ -22,6 +22,8 @@
         if(!mysqli_stmt_execute($stmt)) {
             die('QUERY FAILED .' . mysqli_error($connection));
         }
+
+        echo "User created: " . " " . "<a href='users.php'>View Users</a>";
     }
 
 ?>
