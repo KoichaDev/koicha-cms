@@ -43,6 +43,8 @@
         $user_image = $_FILES['image']['name'];
         $user_image_temp = $_FILES['image']['tmp_name'];
 
+        $hash_created = password_hash($user_password, PASSWORD_ARGON2ID);
+
         // Checking if there is no image, then make sure it WILL display the image!
         if(empty($post_image)) {
             $query = "SELECT * FROM users WHERE user_id = ? ";
@@ -69,7 +71,7 @@
                 user_date_created = now()
                 WHERE user_id = ?"; 
         $stmt = mysqli_prepare($connection, $query);
-        mysqli_stmt_bind_param($stmt, "isssssssi", $user_id, $username, $user_password, $user_firstname, $user_lastname, $user_email, $user_image, $user_role, $user_id);
+        mysqli_stmt_bind_param($stmt, "isssssssi", $user_id, $username, $hash_created, $user_firstname, $user_lastname, $user_email, $user_image, $user_role, $user_id);
         if(!mysqli_stmt_execute($stmt)) {
             die('QUERY FAILED .' . mysqli_error($connection));
         }

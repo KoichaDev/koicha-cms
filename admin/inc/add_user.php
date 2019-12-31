@@ -9,6 +9,8 @@
         
         $user_image = $_FILES['image']['name'];
         $user_image_temp = $_FILES['image']['tmp_name'];
+
+        $hash_created = password_hash($user_password, PASSWORD_ARGON2ID);
         
         
         // PHP In built function. We have to use temporarily post image to display on the web what file it is
@@ -18,7 +20,7 @@
         $query = "INSERT INTO users(username, user_password, user_firstname, user_lastname, user_email, user_img, user_role, user_date_created) 
                   VALUES(?, ?, ?, ?, ?, ?, ?, now())";
         $stmt = mysqli_prepare($connection, $query);
-        mysqli_stmt_bind_param($stmt, "sssssss", $username, $user_password, $user_firstname, $user_lastname, $user_email, $user_image, $user_role);
+        mysqli_stmt_bind_param($stmt, "sssssss", $username, $hash_created, $user_firstname, $user_lastname, $user_email, $user_image, $user_role);
         if(!mysqli_stmt_execute($stmt)) {
             die('QUERY FAILED .' . mysqli_error($connection));
         }
