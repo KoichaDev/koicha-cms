@@ -77,15 +77,27 @@
     }
 
     if(isset($_GET['delete'])) {
-        // Query to delete
+        // Getting the delete id number
         $user_id = $_GET['delete'];
-        $query = "DELETE FROM users WHERE user_id = ?";
-        $stmt = mysqli_prepare($connection, $query);
-        mysqli_stmt_bind_param($stmt, "i", $user_id);
-        if(!mysqli_stmt_execute($stmt)) {
-            die('QUERY FAILED ' . mysqli_error($connection));
+
+        // Checking out the session of the user role 
+        if(isset($_SESSION['user_role'])) {
+            
+            // Example if the user role is admin
+            if(isset($_SESSION['user_role']) === 'admin') {
+                // If the parameter of the url is a 'subscriber' or nothing. Then you can't type for example:
+                // example.com/admin/users.php?source=view_all_users&delete=54 to delete the user
+                // Very important to secure your database!             
+                $query = "DELETE FROM users WHERE user_id = ?";
+                $stmt = mysqli_prepare($connection, $query);
+                mysqli_stmt_bind_param($stmt, "i", $user_id);
+                if(!mysqli_stmt_execute($stmt)) {
+                    die('QUERY FAILED ' . mysqli_error($connection));
+                }
+                // Will refresh the posts.php when delete right away
+                header("Location: users.php?");
+            }
+
         }
-        // Will refresh the posts.php when delete right away
-        header("Location: users.php?");
     }
 ?>
