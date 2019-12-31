@@ -145,7 +145,18 @@
                     echo "<td>" . ucfirst($post_status) . "</td>";
                     echo "<td><img src='./../img/$post_image' alt='image' width='100'></td>";
                     echo "<td>$post_tags</td>";
-                    echo "<td>$post_comments_count</td>";
+
+                    $post_query = "SELECT * FROM comments WHERE comment_post_id = ?";
+                    $stmt = mysqli_prepare($connection, $post_query);
+                    mysqli_stmt_bind_param($stmt, "i", $post_id);
+                    if(!mysqli_stmt_execute($stmt)) {
+                        die('Query of the comments failed' . mysqli_error($connection));
+                    }
+                    $result = mysqli_stmt_get_result($stmt);
+                    $count_post = mysqli_num_rows($result);
+                    
+
+                    echo "<td>$count_post</td>";
                     echo "<td>$post_date</td>";
                     echo "<td>$post_view_count</td>";
                     echo "<td><a href='posts.php?reset={$post_id}'>Reset</a></td>";

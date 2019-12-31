@@ -14,14 +14,15 @@
             die('QUERY FAILED' . mysqli_error($connection));
         }
 
-        $query = "UPDATE post 
+        // This is an alternative way to update the post count
+       /*  $query = "UPDATE post 
                   SET post_comment_count = post_comment_count + 1
                   WHERE post_id = ?";
         $stmt = mysqli_prepare($connection, $query);
         mysqli_stmt_bind_param($stmt, "i", $post_id);
         if(!mysqli_stmt_execute($stmt)) {
             die("QUERY FAILED " . mysqli_error());
-        }
+        } */
 
     }
 ?>
