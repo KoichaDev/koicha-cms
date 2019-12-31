@@ -12,14 +12,15 @@
             <div class="col-md-8">    
             <?php 
 
-                // Here we can set a fixed value how many results we want to get to show the page
+                // Here we can set a fixed value how many results we want to get to show per pagination
                 $display_posts_per_page = 5;
 
-                // We want to get the page value 
+                // We want to get the page value from the URL Parameter 
                 if(isset($_GET['page'])) {
                     $page = $_GET['page'];
                 } else {
-                    // If there is not page, then it will be zero, basically our index.php, and we don't get any errors
+                    // If there is not page, then it will be zero
+                    // basically our index.php, and we don't get any errors
                     $page = "";
                 }
 
@@ -79,7 +80,7 @@
                 }
                 ?>
                 <hr>                
-
+                <!-- Pagination -->
                 <ul class="pager">
                     <?php 
                         for($i = 1; $i <= $count; $i++) {

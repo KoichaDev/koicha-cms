@@ -2,7 +2,6 @@
 <body>
 
     <div id="wrapper">
-
        <?php include_once "./inc/admin_navigation.php"; ?>
 
         <div id="page-wrapper">
@@ -140,7 +139,6 @@
                             </div>
                         </div>
                     </div>
-
                      <!-- /.row --> 
                         <div class="row">
                             <script type="text/javascript">

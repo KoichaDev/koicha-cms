@@ -6,9 +6,9 @@
         //$user_email = $_REQUEST['email'];
         $password = $_POST['password'];
 
-        $query = "SELECT * FROM users WHERE username = ? AND user_password = ?";
+        $query = "SELECT * FROM users WHERE username = ?";
         $stmt = mysqli_prepare($connection, $query);
-        mysqli_stmt_bind_param($stmt, "ss", $username, $password);
+        mysqli_stmt_bind_param($stmt, "s", $username);
         mysqli_stmt_execute($stmt);
         $result = mysqli_stmt_get_result($stmt);
         if(!$result) {
@@ -24,7 +24,7 @@
             $db_role = $row['user_role'];
         }   
         
-        if($username === $db_username && $password === $db_password) {
+        if(password_verify($password, $db_password)) {
             session_start(); // Telling the server to prepare the session for us
             // We want to access the 'username' from the database and match client session we did on the query
             // $db_username;
