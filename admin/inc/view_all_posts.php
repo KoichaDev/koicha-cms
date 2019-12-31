@@ -153,10 +153,17 @@
                         die('Query of the comments failed' . mysqli_error($connection));
                     }
                     $result = mysqli_stmt_get_result($stmt);
-                    $count_post = mysqli_num_rows($result);
+                    $count_comments = mysqli_num_rows($result);
+
+                    $query_comment = "SELECT * FROM comments WHERE comment_post_id = $post_id";
+                    $result = mysqli_query($connection, $query_comment);
+                    $row = mysqli_fetch_assoc($result);
+                    $comment_id = $row['comment_id'];
+                    $count_row_comment = mysqli_num_rows($result);
+                    
                     
 
-                    echo "<td>$count_post</td>";
+                    echo "<td><a href='posts.php?source=blog_comments&id={$post_id}'>$count_comments</a></td>";
                     echo "<td>$post_date</td>";
                     echo "<td>$post_view_count</td>";
                     echo "<td><a href='posts.php?reset={$post_id}'>Reset</a></td>";

@@ -23,6 +23,7 @@
                             switch($source) {
                                 case 'add_post'; include "./inc/add_post.php"; break;
                                 case 'edit_post'; include "./inc/edit_post.php"; break;
+                                case 'blog_comments'; include './inc/blog_comments.php'; break;
                                 case 'view_all_comments'; include "./inc/view_all_comments.php"; break;
                                 default: include "./inc/view_all_posts.php"; break;
                             }
