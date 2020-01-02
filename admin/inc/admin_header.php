@@ -54,18 +54,11 @@ if(!isset($_SESSION['user_role'])) {
     <script src="https://cdn.tiny.cloud/1/n0g8jh52vlyzv163ahyutpg7xeafbvkoc63ceoqt59c8m7de/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <script>tinymce.init({selector:'textarea'});</script>
     <script src="./js/tiny.js" defer></script>
-
-    <!-- TOASTY UI Markdown Editor -->
-    <link rel="stylesheet" href="https://uicdn.toast.com/tui-editor/latest/tui-editor.css"></link>
-    <link rel="stylesheet" href="https://uicdn.toast.com/tui-editor/latest/tui-editor-contents.css"></link>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.css"></link>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css"></link>
-    
-    <!-- Scripts -->
-    <script src="https://uicdn.toast.com/tui-editor/latest/tui-editor-Editor-full.js"></script>
+   
     <!-- Google's Material column charts API-->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="./js/posts.js" defer></script>
     <script src="./js/users.js" defer></script>
+    <script src="./js/modal.js" defer></script>
 
 </head>

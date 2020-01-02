@@ -1,4 +1,7 @@
-<?php 
+<?php  
+
+    include "delete_modal.php";
+
     if(isset($_POST['check_box_array'])) {
         foreach($_POST['check_box_array'] as $check_box_values_id) {
 
@@ -161,14 +164,14 @@
                     $comment_id = $row['comment_id'];
                     $count_row_comment = mysqli_num_rows($result);
                     
-                    
-
                     echo "<td><a href='posts.php?source=blog_comments&id={$post_id}'>$count_comments</a></td>";
                     echo "<td>$post_date</td>";
                     echo "<td>$post_view_count</td>";
                     echo "<td><a href='posts.php?reset={$post_id}'>Reset</a></td>";
                     echo "<td><a href='posts.php?source=edit_post&p_id={$post_id}'>Edit</a></td>";
-                    echo "<td><a href='posts.php?delete={$post_id}'>Delete</a></td>";
+                    echo "<td><a href='posts.php?delete={$post_id}' class='delete-post' onClick='return false;'>Delete</a></td>";
+                    //echo "<td><a href='posts.php?delete={$post_id}'>Delete</a></td>";
+
                     echo "</tr>";
                 }
             ?>
@@ -201,7 +204,6 @@
         }
 
         header("Location: posts.php");
-
-
     }
 ?>
+
