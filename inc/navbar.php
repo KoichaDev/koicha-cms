@@ -14,9 +14,16 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
+                <?php 
+                    if(isset($_SESSION['username'])) {
+                    ?>
                     <li >
-                        <a href="/admin/index.php">Admin</a>
-                    </li>
+                        <a href="/admin/index.php"><i class="fa fa-fw fa-dashboard"></i> Admin</a>
+                    </li
+                    <?php 
+                    }
+                ?>
+                    >
                     <li>
                         <?php 
                         if(isset($_SESSION['username'])) {
