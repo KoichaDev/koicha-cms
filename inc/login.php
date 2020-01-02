@@ -1,5 +1,5 @@
 <?php 
-    include_once "./database.php";
+    include_once "./config.php";
 
     if(isset($_POST['login'])) {
         $username = $_POST['username'];

@@ -1,5 +1,5 @@
 
-<?php include_once "./inc/database.php"; closeDB($connection); ?>
+<?php include_once "./inc/config.php"; closeDB($connection); ?>
 <!-- Footer -->
         <footer>
             <div class="row">

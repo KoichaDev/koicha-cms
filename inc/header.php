@@ -1,5 +1,5 @@
 <?php 
-    include "./inc/database.php"; 
+    include "./inc/config.php"; 
     ob_start();
     session_start();
 ?>
@@ -16,7 +16,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Koicha - Your Front End Developer</title>
+    <title><?php echo SITENAME; ?> - <?php echo DESCRIPTION; ?></title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">

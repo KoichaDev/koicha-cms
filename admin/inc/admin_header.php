@@ -16,7 +16,7 @@ if(!isset($_SESSION['user_role'])) {
 }
 ?> 
  
-<?php include_once "./../inc/database.php"; ?>
+<?php include_once "./../inc/config.php"; ?>
 <?php include_once "./inc/function.php"; ?>
 
 <!DOCTYPE html>
@@ -30,7 +30,7 @@ if(!isset($_SESSION['user_role'])) {
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin - Bootstrap Admin Template</title>
+    <title><?php echo SITENAME; ?> - <?php echo DESCRIPTION; ?></title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">

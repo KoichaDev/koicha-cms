@@ -63,7 +63,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="profile.php"><i class="fa fa-cog"></i> Settings</a>
+                        <a href="settings.php"><i class="fa fa-cog"></i> Settings</a>
                     </li>
                 </ul>
             </div>
