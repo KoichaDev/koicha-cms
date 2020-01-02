@@ -8,7 +8,7 @@ if (window.location.pathname === '/admin/posts.php') {
 
     // Looping through the element of tbody and td
     tbodyTD.forEach(td => {
-        // When looping through, we want to get the className of the element
+        // When looping through, we want to get the className of the element 
         td.querySelectorAll('.delete-post').forEach(deleteLink => {
 
             // After Looping through. We want to make element when we click, so it can do something
