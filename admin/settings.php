@@ -3,7 +3,7 @@
     include "./inc/admin_navigation.php";
 
 
-    function config_update($id, $column, $value) {
+    function config_update($column, $id, $value) {
         global $connection;
 
         $query = "SELECT * FROM config WHERE $column = $id";
@@ -24,8 +24,8 @@
         $site_title = $_POST['site_title'];
         $site_desc = $_POST['site_description'];
 
-        config_update(1, 'config_id', $site_title);
-        config_update(2, 'config_id', $site_desc);
+        config_update('config_id', 1, $site_title);
+        config_update('config_id', 2, $site_desc);
 
     }
 

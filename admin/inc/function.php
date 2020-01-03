@@ -51,4 +51,22 @@
         }
     }
 
+    // Function to check if the user role is an admin or not
+    function is_admin($username) {
+        global $connection;
+        $query = "SELECT user_role FROM users WHERE username = ? ";
+        $stmt = mysqli_prepare($connection, $query);
+        mysqli_stmt_bind_param($stmt, "s", $username);
+        if(!mysqli_stmt_execute($stmt)) {
+            die('Username query went wrong ' . mysqli_error($connection));
+        }
+        $result = mysqli_stmt_get_result($stmt);
+        $row = mysqli_fetch_assoc($result);
+        if($row['user_role'] === 'admin') {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 ?>
