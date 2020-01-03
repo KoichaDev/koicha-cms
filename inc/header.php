@@ -1,5 +1,9 @@
 <?php 
     include "./inc/config.php"; 
+
+    // Removes the annoying php ERR_CACHE_MISS when you want to click on back button if it's registration form for example
+    header('Cache-Control: no cache'); 
+    session_cache_limiter('private_no_expire'); 
     ob_start();
     session_start();
 ?>
