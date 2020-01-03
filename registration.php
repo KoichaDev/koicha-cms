@@ -17,7 +17,12 @@
         $stmt = mysqli_prepare($connection, $query);
         mysqli_stmt_bind_param($stmt, "sss", $username, $hash_created, $email);
         if(!mysqli_stmt_execute($stmt)) {
-            die('Something went wrong: ' . mysqli_error($connection));
+            // Checking if the username exist first
+            if(mysqli_error($connection)) {
+                die('This username already exist!');
+            } else { // If the username doesn't exist, then it will check the email
+                die('This email already exist!');
+            }
         }
         header("Location: index.php");
     }
