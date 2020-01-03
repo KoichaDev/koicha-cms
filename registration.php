@@ -5,11 +5,15 @@
     include "./inc/navbar.php"; 
     
     if(isset($_POST['submit'])) {
+        // Trim will strip out anything with whitespace
+        $username = trim($_POST['username']);
+        $password = trim($_POST['password']);
+        $email = trim($_POST['email']);
 
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-        $email = $_POST['email'];
-        
+        if(empty($username) || empty($email)) {
+            echo "The field can't be empty!";
+        } else {
+
         $hash_created = password_hash($password, PASSWORD_ARGON2ID);
        
         $query = "INSERT INTO users(username, user_password, user_email, user_role, user_date_created) 
@@ -25,14 +29,11 @@
             }
         }
         header("Location: index.php");
+        }
     }
 
-?>
+?>  
 
-
-   
-    
- 
     <!-- Page Content -->
     <div class="container">
     
@@ -51,12 +52,18 @@
                             <label for="email" class="sr-only">Email</label>
                             <input type="email" name="email" id="email" class="form-control" placeholder="somebody@example.com">
                         </div>
-                         <div class="form-group">
+                         <div class="form-group password-msg">
                             <label for="password" class="sr-only">Password</label>
-                            <input type="password" name="password" id="key" class="form-control" placeholder="Password">
+                            <input type="password" name="password" id="password" class="form-control" placeholder="Passwords must be at least 8 characters long">                           
                         </div>
-                
-                        <input type="submit" name="submit" id="btn-login" class="btn btn-success btn-lg btn-block" value="Register">
+                        <label for="strength-bar">Password Strength</label>
+                        <div class="form-group">
+                            <label class="progress-bar" for="strength-bar">asd</label>
+                             <div class="progress">
+                                <div class="progress-bar bg-warning" id="strength-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <input type="submit" name="submit" id="register" class="btn btn-success btn-lg btn-block" value="Register">
                     </form>
                  
                 </div>
