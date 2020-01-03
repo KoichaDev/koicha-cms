@@ -23,17 +23,17 @@
     <title><?php echo SITENAME; ?> - <?php echo DESCRIPTION; ?></title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Custom CSS -->
-    <link href="css/blog-home.css" rel="stylesheet">
+    <link href="/css/blog-home.css" rel="stylesheet">
 
     <!-- Registration CSS -->
 
-    <link href="css/registration.css" rel="stylesheet">
+    <link href="/css/registration.css" rel="stylesheet">
     
     <!-- Pagination CSS -->
-    <link href="css/pagination.css" rel="stylesheet">
+    <link href="/css/pagination.css" rel="stylesheet">
 
     <!-- Font Awesome CSS -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
