@@ -28,7 +28,7 @@
                 $stmt = mysqli_prepare($connection, $query);
                 mysqli_stmt_bind_param($stmt, "s", $cat_title);
                 if(!mysqli_stmt_execute($stmt)) {
-                    die('QUERY FAILED' . mysqli_prepare($connection));
+                    die('This category already exist in the database!');
                 }    
             }
         }
