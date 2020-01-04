@@ -3,10 +3,6 @@
     // This function is buffering our request in the headers of the script, so when we are done with the script. 
     // It will send everything at the same time
     ob_start(); 
-
-    // Removes the annoying php ERR_CACHE_MISS when you want to click on back button if it's registration form for example
-    header('Cache-Control: no cache'); 
-    session_cache_limiter('private_no_expire'); 
     session_start();
 
     // Checking if the person who logs in is a admin or a subscriber

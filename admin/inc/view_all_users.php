@@ -57,7 +57,7 @@
         }
 
         // Will refresh the posts.php when delete right away
-        header("Location: users.php?");
+        header("Location: users.php");
     }
 
     // Query to unapprove
@@ -73,7 +73,7 @@
         }
 
         // Will refresh the posts.php when delete right away
-        header("Location: users.php?");
+        header("Location: users.php");
     }
 
     if(isset($_GET['delete'])) {
