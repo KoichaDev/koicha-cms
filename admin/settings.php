@@ -5,9 +5,11 @@
     if(isset($_POST['submit'])) {
         $site_title = $_POST['site_title'];
         $site_desc = $_POST['site_description'];
+        $post_per_pagination = $_POST['post_per_pagination'];
 
         config_update('config_id', 1, $site_title);
         config_update('config_id', 2, $site_desc);
+        config_update('config_id', 3, $post_per_pagination);
     }
 
     $title = get_value(1);

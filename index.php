@@ -11,9 +11,12 @@
             <!-- Blog Entries Column -->
             <div class="col-md-8">    
             <?php 
+                $query = "SELECT * FROM settings WHERE config_id = 3";
+                $result = mysqli_query($connection, $query);
+                $row = mysqli_fetch_assoc($result);
 
                 // Here we can set a fixed value how many results we want to get to show per pagination
-                $display_posts_per_page = 5;
+                $display_posts_per_page = $row['config_value'];
 
                 // We want to get the page value from the URL Parameter 
                 if(isset($_GET['page'])) {

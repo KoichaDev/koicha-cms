@@ -16,8 +16,11 @@
     }
 ?> 
  
-<?php include_once "./../inc/config.php"; ?>
-<?php include_once "./inc/function.php"; ?>
+<?php 
+    include_once "./../inc/config.php";
+    include_once "./inc/function.php"; 
+    include "./inc/settings_function.php";
+    ?>
 
 <!DOCTYPE html>
 <html lang="en">

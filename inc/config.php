@@ -1,5 +1,5 @@
 <?php 
-    include "./../admin/inc/settings_function.php";
+    //include "./../admin/inc/settings_function.php";
 
     ob_start();
 
