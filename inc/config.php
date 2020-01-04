@@ -1,4 +1,6 @@
 <?php 
+    include "./../admin/inc/settings_function.php";
+
     ob_start();
 
     define("HOST", 'localhost');
@@ -22,7 +24,7 @@
 
     function config_value($column, $id) {
         global $connection;
-        $query = "SELECT * FROM config WHERE $column = $id";
+        $query = "SELECT * FROM settings WHERE $column = $id";
         $result = mysqli_query($connection, $query);
         $row = mysqli_fetch_assoc($result);
         return $row['config_value'];

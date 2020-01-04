@@ -20,7 +20,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><?php echo SITENAME; ?> - <?php echo DESCRIPTION; ?></title>
+    <title><?php echo SITENAME; ?> | <?php echo DESCRIPTION; ?></title>
 
     <!-- Bootstrap Core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">

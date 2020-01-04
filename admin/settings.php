@@ -2,32 +2,21 @@
     include "./inc/admin_header.php"; 
     include "./inc/admin_navigation.php";
 
-
-    function config_update($column, $id, $value) {
-        global $connection;
-
-        $query = "SELECT * FROM config WHERE $column = $id";
-        $result = mysqli_query($connection, $query);
-        $row = mysqli_fetch_assoc($result);
-        
-        $query = "UPDATE config SET config_value = ? WHERE config_id = ?";
-        $stmt = mysqli_prepare($connection, $query);
-        mysqli_stmt_bind_param($stmt, "si", $value, $id);
-        if(!mysqli_stmt_execute($stmt)) {
-            die('Updated the config value went wrong ' . mysqli_error($connection));
-        }
-        header('Location: settings.php');
-        return $row['config_value'];
-    }
-
     if(isset($_POST['submit'])) {
         $site_title = $_POST['site_title'];
         $site_desc = $_POST['site_description'];
 
         config_update('config_id', 1, $site_title);
         config_update('config_id', 2, $site_desc);
-
     }
+
+    $title = get_value(1);
+    $description = get_value(2);
+    $post_per_pagination = get_value(3)
+
+
+    
+
 
 ?>
 
@@ -52,16 +41,25 @@
                             <label for="site-title">Site Title</label>
                         </div>
                         <div class="col-md-6">
-                            <input type="text" name="site_title" class="form-group col-sm-6" id="site-title" placeholder="Your site title">
+                            <input type="text" name="site_title" class="form-group col-sm-6" id="site-title" placeholder="Your site title" value="<?php echo SITENAME; ?>">
                         </div>
                         <div class="col-md-4"></div>
                     </div>
-                  <div class="row">
+                    <div class="row">
                         <div class="col-md-2">
                             <label for="site-description">Site Description</label>
                         </div>
                         <div class="col-md-6">
-                            <input type="text" name="site_description" class="form-group col-sm-6" id="site-description" placeholder="Description of your site">
+                            <input type="text" name="site_description" class="form-group col-sm-6" id="site-description" placeholder="Description of your site" value="<?php echo $description; ?>">
+                        </div>
+                        <div class="col-md-4"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="post-per-pagination">Post Per Pagination</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" name="post_per_pagination" class="form-group col-sm-6" id="post-per-pagination" placeholder="Description of your site" value="<?php echo $post_per_pagination; ?>">
                         </div>
                         <div class="col-md-4"></div>
                     </div>
