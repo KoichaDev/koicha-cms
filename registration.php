@@ -1,8 +1,35 @@
-
-
 <?php 
+    // Importing the library to use the pusher
+    require 'vendor/autoload.php';
+
+    // Importing the environment file
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+    // Files included
     include "./inc/header.php";
     include "./inc/navbar.php"; 
+
+
+
+    $options = array(
+        'cluster' => 'eu',
+        'useTLS' => true
+    );
+
+    /**
+     * Parameter of the Pusher credentials of the instance
+     * 1. Key
+     * 2. secret
+     * 3, app-key
+     * 4. option (cluster)
+     */
+    $pusher = new Pusher\Pusher(
+    getenv('APP_KEY'),
+    getenv('APP_SECRET'),
+    getenv('APP_ID'),
+    $options
+  );
     
     if(isset($_POST['submit'])) {
         // Trim will strip out anything with whitespace
@@ -28,6 +55,8 @@
                 die('This email already exist!');
             }
         }
+        // notification is the channel
+        $pusher -> trigger('notifications', 'new_user', $username);
         header("Location: index.php");
         }
     }
