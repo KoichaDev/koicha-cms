@@ -84,7 +84,7 @@
         if(isset($_SESSION['user_role'])) {
             
             // Example if the user role is admin
-            if(isset($_SESSION['user_role']) === 'admin') {
+            if($_SESSION['user_role'] === 'admin') {
                 // If the parameter of the url is a 'subscriber' or nothing. Then you can't type for example:
                 // example.com/admin/users.php?source=view_all_users&delete=54 to delete the user
                 // Very important to secure your database!             
@@ -95,7 +95,7 @@
                     die('QUERY FAILED ' . mysqli_error($connection));
                 }
                 // Will refresh the posts.php when delete right away
-                header("Location: users.php?");
+                header("Location: users.php");
             }
 
         }
