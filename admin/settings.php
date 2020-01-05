@@ -66,6 +66,15 @@
                         <div class="col-md-4"></div>
                     </div>
                     <div class="row">
+                        <div class="col-md-2">
+                            <label for="post-per-pagination">Membership</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="checkbox" name="login_widget" id="login"> 
+                        </div>
+                        <div class="col-md-4"></div>
+                    </div>
+                    <div class="row">
                         <div class="col-sm-12 col-md-12">
                                 <input type="submit" name="submit" class="btn btn-primary" value="Submit">
                         </div>

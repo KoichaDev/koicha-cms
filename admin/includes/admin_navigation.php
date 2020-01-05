@@ -52,8 +52,14 @@
                         <a href="posts.php?source=view_all_comments"><i class="fa fa-commenting"></i> Comments</a>
                     </li>
                     <li>
-                        <a href="themes.php"><i class="fa fa-paint-brush"></i> Themes</a>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#themes-dropdown"><i class="fa fa-paint-brush"></i> Themes<i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="themes-dropdown" class="collapse">
+                            <li>
+                                <a href="widget.php"></i> Widget</a>
+                            </li>
+                        </ul>
                     </li>
+                    
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-users"></i> Users <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">

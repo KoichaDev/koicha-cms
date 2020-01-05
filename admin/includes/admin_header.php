@@ -18,7 +18,7 @@
  
 <?php 
     include_once "./../includes/config.php";
-    include_once "./includes/function.php"; 
+    include_once "./includes/category_functions.php"; 
     include "./includes/settings_function.php";
     ?>
 
