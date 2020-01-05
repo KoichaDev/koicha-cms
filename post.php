@@ -1,8 +1,8 @@
 
 <!-- Header  -->
-<?php include "./inc/header.php";?>
+<?php include "./includes/header.php";?>
 <!-- Navigation Bar -->
-<?php include "./inc/navbar.php"; ?>
+<?php include "./includes/navbar.php"; ?>
 
 <body>
     <!-- Page Content -->
@@ -58,9 +58,9 @@
             }
                 ?>
                 <!-- Blog Comments -->
-                <?php include "./inc/comments.php"; ?>
+                <?php include "./includes/comments.php"; ?>
                 </div>
                     <!-- Blog Sidebar Widgets Column -->
-                <?php include_once './inc/sidebar.php'; ?>
+                <?php include_once './includes/sidebar.php'; ?>
         </div>
-<?php include_once './inc/footer.php'; ?>
+<?php include_once './includes/footer.php'; ?>

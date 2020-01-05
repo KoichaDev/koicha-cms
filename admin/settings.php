@@ -1,6 +1,6 @@
 <?php 
-    include "./inc/admin_header.php"; 
-    include "./inc/admin_navigation.php";
+    include "./includes/admin_header.php"; 
+    include "./includes/admin_navigation.php";
 
     if(isset($_POST['submit'])) {
         $site_title = $_POST['site_title'];
@@ -23,7 +23,7 @@
 ?>
 
     <div id="wrapper">
-       <?php include_once "./inc/admin_navigation.php"; ?>
+       <?php include_once "./includes/admin_navigation.php"; ?>
 
         <div id="page-wrapper">
 
@@ -82,4 +82,4 @@
 
     
 
-<?php include_once "./inc/admin_footer.php"; ?>
+<?php include_once "./includes/admin_footer.php"; ?>

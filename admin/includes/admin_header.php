@@ -17,9 +17,9 @@
 ?> 
  
 <?php 
-    include_once "./../inc/config.php";
-    include_once "./inc/function.php"; 
-    include "./inc/settings_function.php";
+    include_once "./../includes/config.php";
+    include_once "./includes/function.php"; 
+    include "./includes/settings_function.php";
     ?>
 
 <!DOCTYPE html>

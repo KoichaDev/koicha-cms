@@ -1,9 +1,9 @@
-<?php include_once "./inc/admin_header.php"; ?>
+<?php include_once "./includes/admin_header.php"; ?>
 <body>
 
     <div id="wrapper">
 
-       <?php include_once "./inc/admin_navigation.php"; ?>
+       <?php include_once "./includes/admin_navigation.php"; ?>
 
         <div id="page-wrapper">
             <div class="container-fluid">
@@ -32,7 +32,7 @@
                                 /// Update and edit 
                                 if(isset($_GET['edit'])) {
                                     $cat_id = $_GET['edit'];
-                                    include_once "./inc/update_categories.php";
+                                    include_once "./includes/update_categories.php";
                                 }
                                 ?>
                             </div> 
@@ -67,4 +67,4 @@
 
     </div>
 
-    <?php include_once "./inc/admin_footer.php"; ?>
+    <?php include_once "./includes/admin_footer.php"; ?>

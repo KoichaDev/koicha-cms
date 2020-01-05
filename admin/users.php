@@ -1,4 +1,4 @@
-<?php include_once "./inc/admin_header.php"; ?>
+<?php include_once "./includes/admin_header.php"; ?>
 <?php 
     if(!is_admin($_SESSION['username'])) {
         header('Location: index.php');
@@ -8,7 +8,7 @@
 
     <div id="wrapper">
 
-       <?php include_once "./inc/admin_navigation.php"; ?>
+       <?php include_once "./includes/admin_navigation.php"; ?>
 
         <div id="page-wrapper">
 
@@ -28,9 +28,9 @@
                                 $source = "";
                             }
                             switch($source) {
-                                case 'add_user'; include "./inc/add_user.php"; break;
-                                case 'edit_user'; include "./inc/edit_user.php"; break;
-                                default: include "./inc/view_all_users.php"; break;
+                                case 'add_user'; include "./includes/add_user.php"; break;
+                                case 'edit_user'; include "./includes/edit_user.php"; break;
+                                default: include "./includes/view_all_users.php"; break;
                             }
                         ?>
                     </div>
@@ -44,4 +44,4 @@
 
     </div>
 
-    <?php include_once "./inc/admin_footer.php"; ?>
+    <?php include_once "./includes/admin_footer.php"; ?>

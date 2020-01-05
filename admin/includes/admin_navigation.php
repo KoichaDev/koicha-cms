@@ -23,7 +23,7 @@
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a href="../inc/logout.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                            <a href="../includes/logout.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                         </li>
                     </ul>
                 </li>
@@ -50,6 +50,9 @@
                     </li>
                     <li>
                         <a href="posts.php?source=view_all_comments"><i class="fa fa-commenting"></i> Comments</a>
+                    </li>
+                    <li>
+                        <a href="themes.php"><i class="fa fa-paint-brush"></i> Themes</a>
                     </li>
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-users"></i> Users <i class="fa fa-fw fa-caret-down"></i></a>

@@ -7,8 +7,8 @@
 $dotenv->load();
 
     // Files included
-    include "./inc/header.php";
-    include "./inc/navbar.php"; 
+    include "./includes/header.php";
+    include "./includes/navbar.php"; 
 
 
 
@@ -106,4 +106,4 @@ $dotenv->load();
 
 
 
-<?php include_once './inc/footer.php'; ?>
+<?php include_once './includes/footer.php'; ?>

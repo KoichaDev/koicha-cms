@@ -1,9 +1,9 @@
-<?php include_once "./inc/admin_header.php"; ?>
+<?php include_once "./includes/admin_header.php"; ?>
 <body>
 
     <div id="wrapper">
 
-       <?php include_once "./inc/admin_navigation.php"; ?>
+       <?php include_once "./includes/admin_navigation.php"; ?>
 
         <div id="page-wrapper">
             <div class="container-fluid">
@@ -21,11 +21,11 @@
                                 $source = "";
                             }
                             switch($source) {
-                                case 'add_post'; include "./inc/add_post.php"; break;
-                                case 'edit_post'; include "./inc/edit_post.php"; break;
-                                case 'blog_comments'; include './inc/blog_comments.php'; break;
-                                case 'view_all_comments'; include "./inc/view_all_comments.php"; break;
-                                default: include "./inc/view_all_posts.php"; break;
+                                case 'add_post'; include "./includes/add_post.php"; break;
+                                case 'edit_post'; include "./includes/edit_post.php"; break;
+                                case 'blog_comments'; include './includes/blog_comments.php'; break;
+                                case 'view_all_comments'; include "./includes/view_all_comments.php"; break;
+                                default: include "./includes/view_all_posts.php"; break;
                             }
                         ?>
                     </div>  
@@ -40,4 +40,4 @@
 
     </div>
 
-    <?php include_once "./inc/admin_footer.php"; ?>
+    <?php include_once "./includes/admin_footer.php"; ?>

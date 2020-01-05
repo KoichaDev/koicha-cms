@@ -23,7 +23,7 @@
     <div class="well">
         <h4>Login</h4>
         <p class="error-msg-login-widget text-danger"></p>
-        <form action="./inc/login.php" id="login-form" method="POST">                   
+        <form action="./includes/login.php" id="login-form" method="POST">                   
             <div class="form-group">
                 <input type="text" name="username" class="form-control" id="username" placeholder="Enter Username" required>
             </div>
