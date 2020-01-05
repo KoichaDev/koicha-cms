@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 02, 2020 at 09:34 PM
+-- Generation Time: Jan 05, 2020 at 05:33 PM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.3.12
 
@@ -25,43 +25,41 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `config`
+-- Table structure for table `widget`
 --
 
-CREATE TABLE `config` (
-  `config_id` int(11) NOT NULL,
-  `config_name` varchar(255) NOT NULL,
-  `config_value` longtext NOT NULL
+CREATE TABLE `widget` (
+  `widget_id` int(11) NOT NULL,
+  `widget_name` longtext NOT NULL,
+  `widget_value` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `config`
+-- Dumping data for table `widget`
 --
 
-INSERT INTO `config` (`config_id`, `config_name`, `config_value`) VALUES
-(1, 'site_title', 'Koicha'),
-(2, 'site_description', 'A Passion geek');
+INSERT INTO `widget` (`widget_id`, `widget_name`, `widget_value`) VALUES
+(1, 'widget_login', 1);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `config`
+-- Indexes for table `widget`
 --
-ALTER TABLE `config`
-  ADD PRIMARY KEY (`config_id`),
-  ADD UNIQUE KEY `config_name` (`config_name`);
+ALTER TABLE `widget`
+  ADD PRIMARY KEY (`widget_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `config`
+-- AUTO_INCREMENT for table `widget`
 --
-ALTER TABLE `config`
-  MODIFY `config_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE `widget`
+  MODIFY `widget_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
