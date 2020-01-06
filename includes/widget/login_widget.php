@@ -11,5 +11,8 @@
                 <button class="btn btn-primary" id="login-btn" type="submit" name="login">Submit</button>
             </span>
         </div>
+        <div class="form-group" style="padding-top: 8px; padding-left: 3px;">
+            <a href="./../../registration.php">Create an account</a>
+        </div>
         </form>
 </div>

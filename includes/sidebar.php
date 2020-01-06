@@ -23,7 +23,7 @@
     <?php
     // Login for the widget
     if($login_widget == "1") {
-        include "widget/login-widget.php";
+        include "widget/login_widget.php";
     } 
     ?>
     

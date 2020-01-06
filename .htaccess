@@ -1,5 +1,0 @@
-RewriteEngine on
-
-RewriteRule ^(index|registration)$ $1.php [NC,L]
-
-RewriteRule ^post/(\d+)$ post.php?p_id=$1 [NC,L]

@@ -55,6 +55,9 @@
                         <a href="javascript:;" data-toggle="collapse" data-target="#themes-dropdown"><i class="fa fa-paint-brush"></i> Themes<i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="themes-dropdown" class="collapse">
                             <li>
+                                <a href="themes.php"></i> Apperance</a>
+                            </li>
+                            <li>
                                 <a href="widget.php"></i> Widget</a>
                             </li>
                         </ul>
