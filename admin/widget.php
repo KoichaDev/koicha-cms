@@ -1,7 +1,7 @@
 <?php 
 
-    include "./includes/admin_header.php"; 
-    include "./includes/widgets/widget_functions.php"; 
+    include_once "./includes/admin_header.php"; 
+    include_once "./includes/widgets/widget_functions.php"; 
 ?>
 <body>
 

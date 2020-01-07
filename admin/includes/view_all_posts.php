@@ -1,6 +1,6 @@
 <?php  
 
-    include "delete_modal.php";
+    include_once "delete_modal.php";
 
     if(isset($_POST['check_box_array'])) {
         foreach($_POST['check_box_array'] as $check_box_values_id) {

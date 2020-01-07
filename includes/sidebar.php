@@ -1,5 +1,5 @@
 <?php 
-    include "./admin/includes/widgets/widget_functions.php";
+    include_once "./admin/includes/widgets/widget_functions.php";
 
 ?>
 
@@ -55,6 +55,6 @@
     </div>
 
     <!-- Side Widget Well -->
-    <?php include "widget.php"; ?>
+    <?php include_once "widget.php"; ?>
 
 </div>

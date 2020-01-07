@@ -1,5 +1,4 @@
 <?php 
-    include_once "./includes/config.php";
 
     $query = "SELECT * FROM themes WHERE theme_value = 1";
     $result = mysqli_query($connection, $query);
@@ -11,15 +10,12 @@
 
     switch($theme_name) {
         case 'Sbootstrap': 
-            include "sbootstrap.php";
+            include "./index.php";
         break;
         case 'Koicha': 
             //die(include "./index.php");
             include "./admin/themes/koicha/index.php";
         break;
-        default: 
-            echo 'Nolpe!';
-    break;
     }
 
 ?>

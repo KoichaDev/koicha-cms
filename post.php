@@ -1,8 +1,8 @@
 
 <!-- Header  -->
-<?php include "./includes/header.php";?>
+<?php include_once "./includes/header.php";?>
 <!-- Navigation Bar -->
-<?php include "./includes/navbar.php"; ?>
+<?php include_once "./includes/navbar.php"; ?>
 
 <body>
     <!-- Page Content -->

@@ -7,8 +7,8 @@
 $dotenv->load();
 
     // Files included
-    include "./includes/header.php";
-    include "./includes/navbar.php"; 
+    include_once "./includes/header.php";
+    include_once "./includes/navbar.php"; 
 
 
 
