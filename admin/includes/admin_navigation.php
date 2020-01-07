@@ -13,7 +13,7 @@
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
                 <li>
-                    <a href="../index.php"> <i class="fa fa-home"></i> Visit Website</a>
+                    <a href="../"> <i class="fa fa-home"></i> Visit Website</a>
                 </li> 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo $_SESSION['firstname'];?>&nbsp;<?php echo $_SESSION['lastname'] ?> <b class="caret"></b></a>

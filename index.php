@@ -1,5 +1,7 @@
 <?php 
     include_once "./includes/config.php";
+    header('Cache-Control: no cache'); 
+    session_cache_limiter('private_no_expire'); 
 
     $query = "SELECT * FROM themes WHERE theme_value = 1";
     $result = mysqli_query($connection, $query);
@@ -14,8 +16,8 @@
             include "sbootstrap.php";
         break;
         case 'Koicha': 
-            //die(include "./index.php");
-            include "./admin/themes/koicha/index.php";
+            //die(include "sbootstrap.php");
+            include "admin/themes/koicha/index.php";
         break;
         default: 
             echo 'Nolpe!';

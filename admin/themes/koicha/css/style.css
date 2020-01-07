@@ -1,0 +1,95 @@
+p {
+    line-height: 1.75;
+}
+
+.space {
+    height: 500px;
+}
+
+.intro-header {
+    padding: 180px 100px;
+}
+
+.section-background {
+    padding: 150px 100px;
+}
+
+.section-articles {
+    padding: 150px 100px;
+}
+
+
+.link:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.link-2:hover {
+    color: #007bff !important;
+    text-decoration: none;
+}
+
+/**********************************
+    Page Section of the projects 
+***********************************/
+
+.page-section {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.section-heading {
+    text-transform: uppercase;
+}
+
+.section-heading .section-heading-upper {
+    display: block;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.section-heading .section-heading-lower {
+    display: block;
+    font-size: 3rem;
+    font-weight: 100;
+}
+
+.bg-faded {
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+
+.intro {
+    position: relative;
+}
+
+.intro-2 {
+    position: relative;
+}
+
+.btn {
+    box-shadow: 0px 3px 3px 0px rgba(33, 37, 41, 0.1);
+}
+
+.btn-xl {
+    font-weight: 700;
+    font-size: 0.8rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.btn-primary {
+    background-color: #e6a756;
+    border-color: #e6a756;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: #c59a08;
+    border-color: #c59a08;
+}
+
+

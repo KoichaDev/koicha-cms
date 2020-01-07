@@ -60,24 +60,21 @@
                     // Will display the posts if the post status is "published"
                     if($post_status === "published") {
                     ?>
-
-
-
-                <!-- First Blog Post -->
-                <h1>
-                    <a href="post.php?p_id=<?php echo $post_id; ?>"><?php echo $post_title; ?></a>
-                </h1>
-                <p class="lead">
-                    by <small><a href="index.php"><?php echo $post_author; ?></a></small>
-                </p>
-                <p><span class="glyphicon glyphicon-time"></span> Posted on <?php echo $post_date; ?></p>
-                <hr>
-                <a href="post.php?p_id=<?php echo $post_id; ?>">
-                    <img class="img-responsive" src="./img/<?php echo $post_img; ?>" alt="">
-                </a>
-                <hr>
-                <p><?php echo $post_content; ?></p>
-                <a class="btn btn-primary" href="post.php?p_id=<?php echo $post_id; ?>">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+                        <!-- First Blog Post -->
+                        <h1>
+                            <a href="post.php?p_id=<?php echo $post_id; ?>"><?php echo $post_title; ?></a>
+                        </h1>
+                        <p class="lead">
+                            by <small><a href="index.php"><?php echo $post_author; ?></a></small>
+                        </p>
+                        <p><span class="glyphicon glyphicon-time"></span> Posted on <?php echo $post_date; ?></p>
+                        <hr>
+                        <a href="post.php?p_id=<?php echo $post_id; ?>">
+                            <img class="img-responsive" src="./img/<?php echo $post_img; ?>" alt="">
+                        </a>
+                        <hr>
+                        <p><?php echo $post_content; ?></p>
+                        <a class="btn btn-primary" href="post.php?p_id=<?php echo $post_id; ?>">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
                 <?php
                     }
                 }
