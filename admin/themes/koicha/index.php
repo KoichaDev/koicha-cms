@@ -49,7 +49,7 @@
                 <h4 style="color: #0096FF;" class="float-md-left float-lg-left float-xl-right">Skills </h4>
             </div>
             <div class="col-xl-8 col-sm-12">
-                <div class="table-responsive">
+                <div class="table-responsive d-none d-sm-block d-xl-block">
                     <table class="table table-borderless">
                         <thead>
                             <tr>
@@ -87,9 +87,50 @@
                     </table>
                 </div>
             </div>
+        <div class="container py-4 d-none d-block d-sm-none d-sm-block d-md-none">
+        <div class="row">
+            <div class="col-6">
+            <ul class="list-unstyled text-center">
+                <li><strong>Languages</strong></li>
+                <li>HTML & CSS</li>
+                <li>JavaScript (ES6+)</li>
+                <li>PHP</li>
+                <li>SQL</li>
+            </ul>
+            </div>
+            <div class="col-6">
+            <ul class="list-unstyled text-center">
+                <li><strong>Framework</strong></li>
+                <li>SASS & LESS</li>
+                <li>React</li>
+                <li>Bootstrap</li>
+                <li>Cypress</li>
+            </ul>
+            </div>
+            <div class="col-6">
+            <ul class="list-unstyled text-center">
+                <li><strong>Tools</strong></li>
+                <li>Git & GitHub</li>
+                <li>Webpack & Babel</li>
+                <li>phpMyAdmin</li>
+                <li>Shopify & Wordpress</li>
+            </ul>
+            </div>
+            <div class="col-6">
+            <ul class="list-unstyled text-center">
+                <li><strong>Design</strong></li>
+                <li>Adobe Photoshop</li>
+                <li>Adobe Illustrator</li>
+                <li>Adobe XD</li>
+            </ul>
+            </div>
+            </div><!-- row -->
+        </div><!-- container -->
+            
         </div><!-- row -->
     </div><!-- container -->
 </section>
+
 
 <section class="page-section clearfix" id="section-featured-projects">
     <div class="container">

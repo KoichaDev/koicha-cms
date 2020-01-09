@@ -18,7 +18,12 @@
     .intro-header {
         padding: 150px 1px;
     }
+
+    .section-skills {
+        padding: 0 !important;
+    }
 }
+
 
 @media (max-width: 575.98px) {
     .intro-header {
@@ -27,6 +32,10 @@
 
     .section-background {
         padding: 120px 1px;
+    }
+
+    .section-skills {
+        padding: 0 !important;
     }
 }
 
