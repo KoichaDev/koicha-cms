@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 .code-object {
     -webkit-animation: mover 2s infinite alternate;
     animation: mover 3s infinite alternate;

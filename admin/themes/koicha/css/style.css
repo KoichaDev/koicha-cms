@@ -1,21 +1,21 @@
+.nav-ref {
+    color: red;
+}
+
 p {
     line-height: 1.75;
 }
 
 .space {
-    height: 500px;
+    height: 31.25rem;
 }
 
 .intro-header {
-    padding: 180px 100px;
+    padding: 9.375rem 6.25rem;
 }
 
 .section-background {
-    padding: 150px 100px;
-}
-
-.section-articles {
-    padding: 150px 100px;
+    padding: 9.375rem 6.25rem;
 }
 
 
@@ -58,7 +58,6 @@ p {
     background-color: rgba(255, 255, 255, 0.85);
 }
 
-
 .intro {
     position: relative;
 }
@@ -66,6 +65,8 @@ p {
 .intro-2 {
     position: relative;
 }
+
+
 
 .btn {
     box-shadow: 0px 3px 3px 0px rgba(33, 37, 41, 0.1);

@@ -4,25 +4,25 @@
 
 <header class="intro-header">
     <div class="container">
-    <div class="row">
-        <div class="col-xl-6 mx-auto">
-            <h1 style="height: 10vh;">Hello! 🙋‍♂️</h1>
-            <h2 class>I'm <strong>Khoi</strong>, a Web Developer focusing on building beautiful interfaces & ⚡experiences⚡</h2>
+     <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mx-auto">
+            <h1 class="mb-5">Hello! 🙋‍♂️</h1>
+            <h2 class style="font-family: 'Roboto', sans-serif;">I'm <strong>Khoi</strong>, a Web Developer focusing on building beautiful interfaces & ⚡experiences⚡</h2>
             <br><br>
-            <h5>👉 <a href="mailto:hello@koicha.dev">Let's get in touch</a>   </h5>
+            <h5>👉 <a href="mailto:hello@koicha.dev">Let's get in touch</a></h5>
         </div>  
-        <div class="col-xl-6 mx-auto d-none d-sm-block d-md-block">
-            <img src="/admin/themes/koicha/img/coding.png" alt="koicha coding" class="img-fluid code-object">
-        </div>   
-    </div> <!-- row -->
-</div><div container -->
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mx-auto d-none d-sm-block d-md-block ">
+            <img src="/admin/themes/koicha/img/coding.png" alt="koicha coding" class="img-fluid img-responsive code-object" style="">
+        </div>    
+        </div> <!-- row -->
+    <div container -->
 </header>
 
-<section class="section-background">
-    <div class="container">
+<section class="section-background" id="section-background">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-xl-3 mx-auto">
-                <h4 style="color: #0096FF;" class="float-right">Background </h4>
+                <h4 style="color: #0096FF;" class="float-md-left float-lg-left float-xl-right">Background </h4>
             </div>
             <div class="col-xl-8 col-sm-12">
                 <p>I recently graduated from <strong><a href="https://www.usn.no/english/" class="link">University of South-Eastern Norway</a></strong>, and received my Bachelor degree in Computer Science.</p>
@@ -42,16 +42,16 @@
     </div><!-- container -->
 </section>
 
-<section class="section-skills">
+<section class="section-skills" id="section-skills" style="padding: 9.375rem 1px;">
     <div class="container">
         <div class="row">
             <div class="col-xl-3 mx-auto">
-                <h4 style="color: #0096FF;" class="float-right">Skills </h4>
+                <h4 style="color: #0096FF;" class="float-md-left float-lg-left float-xl-right">Skills </h4>
             </div>
             <div class="col-xl-8 col-sm-12">
                 <div class="table-responsive">
                     <table class="table table-borderless">
-                        <thead class=>
+                        <thead>
                             <tr>
                                 <th>Languages</th>
                                 <th>Framework</th>
@@ -69,7 +69,7 @@
                             <tr>
                                 <td>JavaScript (ES6+)</td>
                                 <td>React</td>
-                                <td>GitKraken</td>
+                                <td>Webpack & Babel</td>
                                 <td>Adobe Illustrator</td>
                             </tr>
                             <tr>
@@ -80,15 +80,9 @@
                             </tr>
                             <tr>    
                                 <td>SQL</td>
-                                <td>React</td>
-                                <td>Webpack & Babel</td>
-                            </tr>
-                            <tr>
-                                <td>Bash</td>
                                 <td>Cypress</td>
                                 <td>Shopify & Wordpress</td>
-                            </tr>
-                            </tr>
+                            </tr>   
                         </tbody>
                     </table>
                 </div>
@@ -97,18 +91,13 @@
     </div><!-- container -->
 </section>
 
-<section class="page-section clearfix">
-<div class="container">
+<section class="page-section clearfix" id="section-featured-projects">
+    <div class="container">
     <div class="row">
-        <div class="col-xl-12">
+        <div class="col-xl-12 py-5">
              <h4 style="color: #0096FF;">Featured Projects </h4>
         </div>
     </div>
-</div>
-</section>
-
-<section class="page-section clearfix">
-    <div class="container">
       <div class="intro">
         <img class="intro-img img-fluid mb-3 mb-lg-0" src="/admin/themes/koicha/img/axo.png" alt="Koicha project worked with Axo Finans">
         <div class="intro-text left-0 text-center bg-faded p-5 ">
@@ -121,7 +110,7 @@
               Loan offers are personal and we help you get the best deal by comparing banks
           </p>
           <div class="intro-button mx-auto">
-            <a class="btn btn-primary btn-xl" href="https://www.axofinans.no/" rel="follow" style="background-color: #FDC300;">Visit the Site!</a>
+            <a class="btn btn-primary btn-xl" href="https://www.axofinans.no/" rel="follow" style="background-color: #FDC300; border-color: #ecb600;">Visit the Site!</a>
           </div>
         </div>
       </div>
@@ -143,13 +132,14 @@
               strong trend among young people right at the time of the film's release.
           </p>
           <div class="intro-button mx-auto">
-            <a class="btn btn-primary btn-xl" href="https://studio68.asia/" rel="follow" style="background-color: #FDC300;">Visit the Site!</a>
+            <a class="btn btn-primary btn-xl" href="https://studio68.asia/" rel="follow" style="background-color: #FDC300; border-color: #ecb600;">Visit the Site!</a>
           </div>
         </div>
       </div>
     </div>
 </section>
-<section class="section-articles">
+
+<section class="section-articles py-4" id="section-articles">
     <div class="container">
         <div class="col-xl-12" style="text-align: center;">
             <h1 style="color: #0096FF;">My blogs</h1>
@@ -170,13 +160,13 @@
         ?>
                 <div class="col-md-4 mb-5">
                         <div class="card h-100">
-                        <img class="card-img-top" class="img-thumbnai" src="./img/<?php echo $post_img; ?>" alt="">
+                        <img class="card-img-top" class="img-thumbnail" src="./img/<?php echo $post_img; ?>" alt="">
                         <div class="card-body">
-                            <h4 class="card-title" style="text-align: center;"><?php echo $post_title; ?></h4>
+                            <h4 class="card-title text-center"><?php echo $post_title; ?></h4>
                             <p class="card-text"><?php echo  $post_content; ?></p>
                         </div>
-                        <div class="card-footer">
-                            <a href="#" class="btn btn-primary" class="pull-right">Find Out More!</a>
+                        <div class="card-footer text-center">
+                            <a href="#" class="btn btn-primary">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -189,18 +179,5 @@
 </section>
     <?php
   ?>
-
-<section class="page-section clearfix">
-<div class="container">
-    <div class="row">
-        <div class="col-xl-12" style="text-align: center;">
-             <h1 style="color: #0096FF;">Let's Get in Touch 👋</h1>
-        </div>
-    </div>
-</div>
-</section>
-
-
-    
 
 <?php include_once "includes/footer.php"; ?>
