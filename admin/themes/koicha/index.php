@@ -25,17 +25,17 @@
                 <h4 style="color: #0096FF;" class="float-md-left float-lg-left float-xl-right">Background </h4>
             </div>
             <div class="col-xl-8 col-sm-12">
-                <p>I recently graduated from <strong><a href="https://www.usn.no/english/" class="link">University of South-Eastern Norway</a></strong>, and received my Bachelor degree in Computer Science.</p>
+                <p>I recently graduated from the <strong><a href="https://www.usn.no/english/" class="link">University of South-Eastern Norway</a></strong> and received my Bachelor degree in Computer Science.</p>
                 <p>
                     During my awesome working experiences at <strong><a href="https://www.omegamedia.no/?lang=en" class="link">Omega Media</a></strong>. 
-                    I have been fortune to be involved in projects of creating a SlackBot, <strong><a href="https://www.axofinans.no/" class="link">Axo Finans</a></strong> and  <strong><a href="https://sensuelt.com/" class="link">Sensuelt</a></strong> <strong><em>(Don't ask how I got involved ¯\_(ツ)_/¯ )</em></strong> 
+                    I have been fortunate to be involved in projects of creating a SlackBot, <strong><a href="https://www.axofinans.no/" class="link">Axo Finans</a></strong> and  <strong><a href="https://sensuelt.com/" class="link">Sensuelt</a></strong> <strong><em>(Don't ask how I got involved ¯\_(ツ)_/¯ )</em></strong> 
                 </p>
                 <p>
-                    As a Web Developer, I enjoy working in programming, and I have keen eye for designing to create beautiful products. 
-                    My goal is always to strive create a scaleable software, and as well as keeping up with the latest technology, and web trends design.   
+                    As a Web Developer, I enjoy working in programming, and I have a keen eye for designing to create beautiful products. 
+                    My goal is always to strive to create scaleable software, and as well as keeping up with the latest technology, and web trends design.   
                 </p>
                 <p>
-                    <b>During my sparetime</b>, I usually go to the gym, hanging out with friends, playing video games, or try to experience by cooking awesome food. 
+                    <b>During my spare time</b>, I usually go to the gym, hanging out with friends, playing video games, or try to experience by cooking awesome food. 
                 </p>
             </div>
         </div><!-- row -->
@@ -169,7 +169,7 @@
           <p class="mb-3">
               Studio68 is one of the leading entertainment companies in Vietnam, founded by Actor and Producer 
               <a href="https://www.imdb.com/name/nm1787887/" style="color: black; text-decoration: none;" class="link-2"><strong>Ngo Thanh Van</strong></a>. 
-              Leading in exploiting Vietnam's special cultural materials on the screen, Studio68's film products always resonated and created a 
+              Leading in exploiting Vietnam's special cultural materials on the screen. Studio68's film products always resonated and created a 
               strong trend among young people right at the time of the film's release.
           </p>
           <div class="intro-button mx-auto">
@@ -221,6 +221,6 @@
     <?php
   ?>
 <button class="btn btn-top " id="scroll-to-navbar" style="display: inline-block;">
-    <img src="/admin/themes/koicha/img/pointing-up.png" width="40" alt="koicha pointing up">
+    <img src="/admin/themes/koicha/img/pointing-up.png" class="pointing-up" width="40" alt="koicha pointing up">
 </button>
 <?php include_once "includes/footer.php"; ?>

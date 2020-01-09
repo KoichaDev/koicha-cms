@@ -1,5 +1,6 @@
-.nav-ref {
-    color: red;
+.navbar-light 
+.navbar-toggler {
+    border-color: transparent !important;
 }
 
 p {
@@ -81,16 +82,16 @@ p {
     padding-right: 2rem;
 }
 
-.btn-primary {
+.btn-xl {
     background-color: #e6a756;
     border-color: #e6a756;
 }
 
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active {
-    background-color: #c59a08;
-    border-color: #c59a08;
+.btn-xl:hover,
+.btn-xl:focus,
+.btn-xl:active {
+    background-color: #e7b306 !important;
+    border-color: #e7b306 !important;
 }
 
 .btn {
@@ -98,14 +99,14 @@ p {
 }
 
 .btn-top {
-    max-width: 100%;
-    vertical-align: middle;
-    display: inline-block;
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    z-index: 99;
-    font-size: 18px;
-    padding: 15px;
-    border-radius: 4px;
+     max-width: 100%;
+     vertical-align: middle;
+     display: inline-block;
+     position: fixed;
+     bottom: 20px;
+     right: 30px;
+     z-index: 99;
+     font-size: 18px;
+     padding: 15px;
+     border-radius: 4px;
 }
