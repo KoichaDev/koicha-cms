@@ -9,12 +9,17 @@
 
 @media (min-width: 768px) and (max-width: 991.98px) {
     .code-object {
-        padding-top: 9rem;
-        max-width: 140% !important;
+        padding-top: 12rem;
+    }
+    .section-background {
+        padding: 3.375rem 6.25rem !important;
     }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
+    .code-object {
+        padding-top: 12rem;
+    }
     .intro-header {
         padding: 150px 1px;
     }

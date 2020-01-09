@@ -220,5 +220,7 @@
 </section>
     <?php
   ?>
-
+<button class="btn btn-top " id="scroll-to-navbar" style="display: inline-block;">
+    <img src="/admin/themes/koicha/img/pointing-up.png" width="40" alt="koicha pointing up">
+</button>
 <?php include_once "includes/footer.php"; ?>
