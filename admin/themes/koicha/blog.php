@@ -6,7 +6,7 @@
 
   <div class="container">
     <div class="row">
-      <h2 class="col-sm-12 col-md-12 col-lg-12 col-xl-12 pl-5">Blog for Web Developer</h2>
+      <h1 class="col-sm-12 col-md-12 col-lg-12 col-xl-12 pl-5 ">📚Blog for Web Developer📚</h1>
     </div>
   </div>
        
