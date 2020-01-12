@@ -97,6 +97,9 @@ p {
 .btn {
     box-shadow: none !important;
 }
+.btn-primary {
+    background-color: #DFECFF !important;
+}
 
 .btn-top {
      max-width: 100%;

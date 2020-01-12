@@ -1,3 +1,5 @@
+<?php include_once "../../../includes/config.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,10 +8,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title><?php echo SITENAME; ?> | <?php echo DESCRIPTION; ?></title>
 
-         <!-- Customized CSS -->
+        <!-- Customized CSS -->
         <link rel="stylesheet" href="/admin/themes/koicha/css/style.css">
+     
+        <!-- SideBar CSS  -->        
+        <link rel="stylesheet" href="/admin/themes/koicha/css/sidebar.css">
 
-         <!-- Media Query CSS -->
+        <!-- Media Query CSS -->
         <link rel="stylesheet" href="/admin/themes/koicha/css/media.css">
         
         <!-- Animation CSS -->

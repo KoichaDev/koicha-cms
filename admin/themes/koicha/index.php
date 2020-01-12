@@ -184,7 +184,7 @@
     <div class="container">
         <div class="col-xl-12" style="text-align: center;">
             <h1 style="color: #0096FF;">My blogs</h1>
-            <p>❤️ <a href="#">Click here to read more of my blogs</a> ❤️</p>
+            <p><a href="/admin/themes/koicha/blog.php">Click here to read more of my blogs</a></p>
             <hr>
         </div>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
