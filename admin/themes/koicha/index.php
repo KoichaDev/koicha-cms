@@ -184,12 +184,12 @@
     <div class="container">
         <div class="col-xl-12" style="text-align: center;">
             <h1 style="color: #0096FF;">My blogs</h1>
-            <p><a href="/admin/themes/koicha/blog.php">Click here to read more of my blogs</a></p>
+            <p><a href="/admin/themes/koicha/blog.php?page=1">Click here to read more of my blogs</a></p>
             <hr>
         </div>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
 <?php 
-    $query = "SELECT * FROM post"; 
+    $query = "SELECT * FROM post LIMIT 0, 6"; 
     $result = mysqli_query($connection, $query);
     while($row = mysqli_fetch_assoc($result)) {
         $post_title = $row['post_title'];
@@ -201,7 +201,7 @@
         ?>
                 <div class="col-md-4 mb-5">
                         <div class="card h-100">
-                        <img class="card-img-top" class="img-thumbnail" src="./img/<?php echo $post_img; ?>" alt="">
+                        <img class="card-img-top" class="img-thumbnail" src="../../../../img/<?php echo $post_img; ?>" alt="">
                         <div class="card-body">
                             <h4 class="card-title text-center"><?php echo $post_title; ?></h4>
                             <p class="card-text"><?php echo  $post_content; ?></p>
