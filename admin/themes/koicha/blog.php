@@ -6,13 +6,21 @@
 
   <div class="container">
     <div class="row">
-      <h1 class="col-sm-12 col-md-12 col-lg-12 col-xl-12 pl-5 ">📚Blog for Web Developer📚</h1>
-    </div>
-  </div>
+      <h1 class="col-sm-12 col-md-12 col-lg-12 col-xl-12 pl-5 mx-auto">📚Blog for Web Developer📚</h1>
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 pl-4 p-3 ">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb" style="background: none; font-weight: bold;">
+            <li class="breadcrumb-item"><a href="index.php">&nbsp;&nbsp;&nbsp;Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Blog</li>
+          </ol>
+       </nav> <!-- nav breadcrumb -->
+      </div><!-- col -->
+    </div><!-- row -->
+  </div><!-- container -->
        
   <div class="container d-md-flex align-items-stretch">
     <!-- Page Content  -->
-    <div id="content" class="row p-4 pt-5">
+    <div id="content" class="row p-4 pt-5 mt-n5">
       <?php
         $query = "SELECT * FROM settings WHERE config_id = 3";
         $result = mysqli_query($connection, $query);

@@ -1,6 +1,6 @@
 <nav id="sidebar" style="border-left: transparent;">
     <div class="container-fluid">
-        <h3>📰 Recent Post</h3>
+        <h3 class="py-3">📰 Recent Post</h3>
         <?php 
             $query = "SELECT * FROM post ORDER BY post_id ASC";
             $result = mysqli_query($connection, $query);

@@ -37,8 +37,15 @@
 
                     if($post_status === "published") { 
                 ?>
-                <div class="col-sm-12 col-md-11 col-lg-11 col-xl-11">    
-                <h1><?php echo $post_title; ?></h1>
+                <div class="col-sm-12 col-md-11 col-lg-11 col-xl-11">
+                 <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb" style="background: none; font-weight: bold;">
+                        <li class="breadcrumb-item ml-n3"><a href="index.php">Home</a></li>
+                        <li class="breadcrumb-item"><a href="blog.php">Blog</a></li>
+                        <li class="breadcrumb-item active" aria-current="page"><?php echo $post_title; ?></li>
+                    </ol>
+                </nav> <!-- nav breadcrumb -->    
+                <h1 class="ml-n1"><?php echo $post_title; ?></h1>
                 <p class="lead">
                     <small>By <a href="index.php"><?php echo $post_author; ?></a></small>
                 </p>

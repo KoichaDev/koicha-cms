@@ -2,7 +2,7 @@
     <div class="container text-center text-md-left">
       <div class="row">      
         <div class="col-md-4 col-lg-4 text-center mx-auto my-4">
-          <p>Designed & Developed by Khoi Hoang</p>
+          <p>🔥 <strong>Designed & Developed by Khoi Hoang</strong> 🔥</p>
           <a type="button" href="https://www.linkedin.com/in/khohoa/" class="btn-floating btn-fb">
             <i class="fa fa-linkedin-square"></i>
           </a>
