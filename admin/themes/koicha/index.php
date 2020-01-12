@@ -28,11 +28,12 @@
                 <p>I recently graduated from the <strong><a href="https://www.usn.no/english/" class="link">University of South-Eastern Norway</a></strong> and received my Bachelor degree in Computer Science.</p>
                 <p>
                     During my awesome working experiences at <strong><a href="https://www.omegamedia.no/?lang=en" class="link">Omega Media</a></strong>. 
-                    I have been fortunate to be involved in projects of creating a SlackBot, <strong><a href="https://www.axofinans.no/" class="link">Axo Finans</a></strong> and  <strong><a href="https://sensuelt.com/" class="link">Sensuelt</a></strong> <strong><em>(Don't ask how I got involved ¯\_(ツ)_/¯ )</em></strong> 
+                    I have been fortunate to be involved in projects of creating a SlackBot, <strong><a href="https://www.axofinans.no/" class="link">Axo Finans</a></strong> and  <strong><a href="https://sensuelt.com/" class="link">Sensuelt</a></strong> <strong><em>(Don't ask how I got involved ┐(￣ヘ￣;)┌ )</em></strong> 
                 </p>
                 <p>
                     As a Web Developer, I enjoy working in programming, and I have a keen eye for designing to create beautiful products. 
-                    My goal is always to strive to create scaleable software, and as well as keeping up with the latest technology, and web trends design.   
+                    My goal is always to strive to create scaleable software, and as well as keeping up with the latest technology, and web trends design.  
+                    You can read <strong><a href="blog.php">my blog </a></strong> input of the web technology.👍 
                 </p>
                 <p>
                     <b>During my spare time</b>, I usually go to the gym, hanging out with friends, playing video games, or try to experience by cooking awesome food. 
@@ -183,7 +184,7 @@
 <section class="section-articles py-4" id="section-articles">
     <div class="container">
         <div class="col-xl-12" style="text-align: center;">
-            <h1 style="color: #0096FF;">My blogs</h1>
+            <h1>My blogs</h1>
             <p><a href="/admin/themes/koicha/blog.php?page=1">Click here to read more of my blogs</a></p>
             <hr>
         </div>
