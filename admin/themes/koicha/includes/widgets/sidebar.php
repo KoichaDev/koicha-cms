@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <h3>Recent Post</h3>
         <?php 
-            $query = "SELECT * FROM post";
+            $query = "SELECT * FROM post ORDER BY post_id ASC";
             $result = mysqli_query($connection, $query);
             while($row = mysqli_fetch_assoc($result)) {
             $post_title = $row['post_title'];
@@ -20,7 +20,7 @@
                     </div> <!-- col -->
                     <div class="col-12 col-sm-6 col-md-12 col-lg-6">
                     <h6 class="mb-1">
-                        <a href="" title="Qasem Soleimani, Darth Vader của Trung Đông"><?php echo $post_title; ?></a>
+                        <a href="" title=""><?php echo $post_title; ?></a>
                     </h6>
                     </div>
                 </div><!-- row -->
