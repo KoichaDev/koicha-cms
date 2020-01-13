@@ -1,7 +1,6 @@
 <?php 
     include_once "./includes/config.php";
-    header('Cache-Control: no cache'); 
-    session_cache_limiter('private_no_expire'); 
+    
 
     $query = "SELECT * FROM themes WHERE theme_value = 1";
     $result = mysqli_query($connection, $query);

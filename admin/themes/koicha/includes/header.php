@@ -13,16 +13,6 @@
     // It will send everything at the same time
     ob_start(); 
     session_start();
-
-    // Checking if the person who logs in is a admin or a subscriber
-    // IF the user is not admin, then it will be forced to redirect to the homepage site only
-    if(!isset($_SESSION['user_role'])) {
-        header("Location: ../index.php");
-    } else {
-        if($_SESSION['user_role'] !== 'admin') { 
-            header("Location: ../index.php");
-        }
-    }
 ?>
 
 <!DOCTYPE html>
