@@ -193,6 +193,7 @@
     $query = "SELECT * FROM post LIMIT 0, 6"; 
     $result = mysqli_query($connection, $query);
     while($row = mysqli_fetch_assoc($result)) {
+        $post_id = $row['post_id'];
         $post_title = $row['post_title'];
         $post_img = $row['post_image'];
         $post_content = substr($row['post_content'], 0, 250);
@@ -208,7 +209,7 @@
                             <p class="card-text"><?php echo  $post_content; ?></p>
                         </div>
                         <div class="card-footer text-center">
-                            <a href="#" class="btn btn-primary">Read More</a>
+                            <a href="post.php?p_id=<?php echo $post_id; ?>" class="btn btn-primary">Read More</a>
                         </div>
                     </div>
                 </div>
