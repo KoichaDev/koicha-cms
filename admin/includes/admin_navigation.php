@@ -8,33 +8,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/index.php">Admin Dashboard</a>
+                <a class="navbar-brand" href="../index.php">Admin Dashboard</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
-                <li>
-                    <?php 
-                        $query = "SELECT * FROM themes WHERE theme_value = 1";
-                        $result = mysqli_query($connection, $query);
-                        while($row = mysqli_fetch_assoc($result)) {
-                            $theme_name = $row['theme_name'];
-                            $theme_value = $row['theme_value'];
-                        }
-                        switch($theme_name) {
-                        case 'Sbootstrap':?> 
-                            <a href="/sbootstrap.php"> <i class="fa fa-home"></i> Visit Website</a>
-                            <?php
-                        break;
-                        case 'Koicha': ?>
-                            <a href="themes/koicha/index.php"> <i class="fa fa-home"></i> Visit Website</a>
-                            <?php
-                        break;
-                        default: 
-                            echo 'Nolpe!';
-                        break;
-                    }
-                    ?>
-                </li> 
+                <li><a href="../index.php"> <i class="fa fa-home"></i> Visit Website</a></li> 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo $_SESSION['firstname'];?>&nbsp;<?php echo $_SESSION['lastname'] ?> <b class="caret"></b></a>
                     <ul class="dropdown-menu">

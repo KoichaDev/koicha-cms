@@ -48,6 +48,7 @@
         <!-- App JavaScript -->
         <script src="/admin/themes/koicha/js/app.js" defer></script>
         
+        
         <!-- darkmode.js -->
         <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.4/lib/darkmode-js.min.js"></script>
 </head>
