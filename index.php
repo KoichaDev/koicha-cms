@@ -12,7 +12,7 @@
             <h5>👉 <a href="mailto:hello@koicha.dev">Let's get in touch</a></h5>
         </div>  
         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mx-auto d-none d-sm-block d-md-block ">
-            <img src="/admin/themes/koicha/img/coding.png" alt="koicha coding" class="img-fluid img-responsive code-object" style="">
+            <img src="img/coding.png" alt="koicha coding" class="img-fluid img-responsive code-object" style="">
         </div>    
         </div> <!-- row -->
     <div container -->
@@ -141,7 +141,7 @@
         </div>
     </div>
       <div class="intro">
-        <img class="intro-img img-fluid mb-3 mb-lg-0" src="/admin/themes/koicha/img/axo.png" alt="Koicha project worked with Axo Finans">
+        <img class="intro-img img-fluid mb-3 mb-lg-0" src="img/axo.png" alt="Koicha project worked with Axo Finans">
         <div class="intro-text left-0 text-center bg-faded p-5 ">
           <h2 class="section-heading mb-4">
             <span class="section-heading-lower">Axo Finans</span>
@@ -162,7 +162,7 @@
 <section class="page-section clearfix">
     <div class="container">
       <div class="intro-2">
-        <img class="intro-img-2 img-fluid mb-3 mb-lg-0" src="/admin/themes/koicha/img/studio68.png" alt="Koicha project worked with Studio 68">
+        <img class="intro-img-2 img-fluid mb-3 mb-lg-0" src="img/studio68.png" alt="Koicha project worked with Studio 68">
         <div class="intro-text left-0 text-center bg-faded p-5 ">
           <h2 class="section-heading mb-4">
             <span class="section-heading-lower">Studio68</span>
@@ -186,8 +186,8 @@
         <div class="col-xl-12" style="text-align: center;">
             <h1>My blogs</h1>
             <p><a href="blog.php?page=1">Click here to read more of my blogs</a></p>
-            <hr>
         </div>
+        <hr>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
 <?php 
     $query = "SELECT * FROM post ORDER BY post_id ASC LIMIT 0, 6"; 
@@ -201,16 +201,14 @@
         // Will display the posts if the post status is "published"
         if($post_status === "published") {
         ?>
-                <div class="col-md-4 mb-5">
-                        <div class="card h-100">
-                        <img class="card-img-top" class="img-thumbnail" src="/../../../img/<?php echo $post_img; ?>" alt="">
+                <div class="card-group col-md-4 mb-5">
+                        <div class="card d-flex flex-column">
+                        <img class="card-img-top" class="img-thumbnail" src="img/<?php echo $post_img; ?>" alt="">
                         <div class="card-body">
                             <h4 class="card-title text-center"><?php echo $post_title; ?></h4>
                             <p class="card-text"><?php echo  $post_content; ?></p>
                         </div>
-                        <div class="card-footer text-center">
-                            <a href="post.php?p_id=<?php echo $post_id; ?>" class="btn btn-primary">Read More</a>
-                        </div>
+                        <a href="post.php?p_id=<?php echo $post_id; ?>" class="mt-auto btn btn-lg btn-block btn-outline-primary">Read More</a>
                     </div>
                 </div>
         <?php
@@ -223,6 +221,6 @@
     <?php
   ?>
 <button class="btn btn-top " id="scroll-to-navbar" style="display: inline-block;">
-    <img src="/admin/themes/koicha/img/pointing-up.png" class="pointing-up" width="40" alt="koicha pointing up">
+    <img src="img/pointing-up.png" class="pointing-up" width="40" alt="koicha pointing up">
 </button>
 <?php include_once "includes/footer.php"; ?>

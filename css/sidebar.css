@@ -8293,12 +8293,12 @@ a[data-toggle="collapse"] {
   -o-transition: all 0.3s;
   transition: all 0.3s; }
 
-.btn.btn-primary {
+/* .btn.btn-primary {
   background: #fc7fb2;
   border-color: #fc7fb2; }
   .btn.btn-primary:hover, .btn.btn-primary:focus {
     background: #fc7fb2 !important;
-    border-color: #fc7fb2 !important; }
+    border-color: #fc7fb2 !important; } */
 
 .footer p {
   color: rgba(255, 255, 255, 0.5); }
@@ -8314,8 +8314,8 @@ a[data-toggle="collapse"] {
   border: 1px solid #ccc;
   font-size: 11px; }
   .tagcloud a:hover {
-    border-color: #fc7fb2;
-    background: #fc7fb2;
+    border-color: rgb(0, 113, 235);
+    background: rgb(0, 113, 235);
     color: #fff; }
 
 .form-control {

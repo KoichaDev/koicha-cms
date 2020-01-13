@@ -1,6 +1,6 @@
-<div class="mb-5">
-    <h3>Tags</h3>
-    <div class="tagcloud">
+<div class="mb-5 py-5">
+    <h3>🏷️ Code Tags 🏷️</h3>
+    <div class="tagcloud py-3">
         <?php
             $query = "SELECT * FROM categories";
             $result = mysqli_query($connection, $query);

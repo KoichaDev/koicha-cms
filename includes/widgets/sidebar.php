@@ -1,6 +1,6 @@
 <nav id="sidebar" style="border-left: transparent;">
     <div class="container-fluid">
-        <h3 class="py-3">📰 Recent Post</h3>
+        <h3 class="py-3">📰 Recent Post 📰</h3>
         <?php 
             $query = "SELECT * FROM post ORDER BY post_id ASC";
             $result = mysqli_query($connection, $query);
@@ -27,22 +27,8 @@
             <?php
                 }
             }
+            include_once "includes/widgets/tags.php";
             ?>            
-            <div class="mb-5">
-                <h5>Tags</h5>
-                <div class="tagcloud">
-                    <?php
-                        $query = "SELECT * FROM categories";
-                        $result = mysqli_query($connection, $query);
-                        while($row = mysqli_fetch_assoc($result)) {
-                            $tags = $row['cat_title'];
-                            ?>
-                            <a href="#" class="tag-cloud-link"><?php echo $tags; ?></a>
-                            <?php
-                        }
-                    ?>
-                </div><!-- Tag cloud -->
-            </div><!-- mb-5 -->
         </div><!-- p-4 pt-5 -->
     </div>
 </nav>
