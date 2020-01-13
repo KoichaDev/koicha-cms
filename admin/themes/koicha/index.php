@@ -202,7 +202,7 @@
         ?>
                 <div class="col-md-4 mb-5">
                         <div class="card h-100">
-                        <img class="card-img-top" class="img-thumbnail" src="../../../../img/<?php echo $post_img; ?>" alt="">
+                        <img class="card-img-top" class="img-thumbnail" src="/../../../img/<?php echo $post_img; ?>" alt="">
                         <div class="card-body">
                             <h4 class="card-title text-center"><?php echo $post_title; ?></h4>
                             <p class="card-text"><?php echo  $post_content; ?></p>
