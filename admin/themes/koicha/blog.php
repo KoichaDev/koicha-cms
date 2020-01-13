@@ -57,7 +57,7 @@
         // This number will give us amount of post that will be displayed per pagination
         $count = ceil($count / $display_posts_per_page);
 
-        $query = "SELECT * FROM post ORDER BY post_id DESC LIMIT $page_1, $display_posts_per_page";
+        $query = "SELECT * FROM post ORDER BY post_id ASC LIMIT $page_1, $display_posts_per_page";
         $result = mysqli_query($connection, $query);
         while($row = mysqli_fetch_assoc($result)) {
           $post_id = $row['post_id'];
