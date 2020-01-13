@@ -190,7 +190,7 @@
         </div>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
 <?php 
-    $query = "SELECT * FROM post LIMIT 0, 6"; 
+    $query = "SELECT * FROM post ORDER BY post_id ASC LIMIT 0, 6"; 
     $result = mysqli_query($connection, $query);
     while($row = mysqli_fetch_assoc($result)) {
         $post_id = $row['post_id'];

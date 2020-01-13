@@ -1,6 +1,12 @@
 <?php 
-    include_once "../../../includes/config.php"; 
-    include_once "help_functions.php";
+
+    if($_SERVER['REQUEST_URI'] == '/koicha-cms/index.php') {
+        include_once "includes/config.php"; 
+        include_once "help_functions.php";
+    } else {
+        include_once "../../../includes/config.php"; 
+        include_once "help_functions.php";
+    }
 
     // This will output the buffering. We need to use it for redirecting users, or pieces of coding or application
     // This function is buffering our request in the headers of the script, so when we are done with the script. 
