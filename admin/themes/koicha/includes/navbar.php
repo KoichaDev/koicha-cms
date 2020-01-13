@@ -8,11 +8,11 @@
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item"><a href="#section-background" class="nav-link">Background</a></li>
-            <li class="nav-item"><a href="#section-skills" class="nav-link">Skills</a></li>
-            <li class="nav-item"><a href="#section-featured-projects" class="nav-link">Projects</a></li>
-	          <li class="nav-item"><a href="#section-articles" class="nav-link">Blog</a></li>
-	          <li class="nav-item"><a href="mailto: hello@koicha.dev" class="nav-link">👉 Contact Me 👈</a></li>
+			  	<li class="nav-item"><a href="<?php echo redirect_navBarURL('#section-background'); ?>" class="nav-link">Background</a></li>
+            	<li class="nav-item"><a href="<?php echo redirect_navBarURL('#section-skills'); ?>" class="nav-link">Skills</a></li>
+            	<li class="nav-item"><a href="<?php echo redirect_navBarURL('#section-featured-projects'); ?>" class="nav-link">Projects</a></li>
+	          	<li class="nav-item"><a href="<?php echo redirect_navBarURL('#section-articles'); ?>" class="nav-link">Blog</a></li>
+	          	<li class="nav-item"><a href="mailto: hello@koicha.dev" class="nav-link">Contact Me</a></li>
 	        </ul>
 	      </div>
 	    </div>

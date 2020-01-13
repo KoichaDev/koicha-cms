@@ -1,4 +1,7 @@
-<?php include_once "../../../includes/config.php"; ?>
+<?php 
+    include_once "../../../includes/config.php"; 
+    include_once "help_functions.php";
+?>
 
 <!DOCTYPE html>
 <html lang="en">
