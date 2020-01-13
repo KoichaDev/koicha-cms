@@ -1,44 +1,28 @@
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/">Koicha</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                <?php 
-                    if(isset($_SESSION['username'])) {
-                    ?>
-                    <li >
-                        <a href="/admin/index.php"><i class="fa fa-fw fa-dashboard"></i> Admin</a>
-                    </li
-                    <?php 
-                    }
-                ?>
-                    >
-                    <li>
-                        <?php 
-                        if(isset($_SESSION['username'])) {
-                            if(isset($_GET['p_id'])) {
-                                $p_id = $_GET['p_id'];                                
-                                echo "<a href='admin/posts.php?source=edit_post&p_id=$p_id;'>Edit Post</a>";
-                            }
-                        }
-                    ?>
-                    </li>                    
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+<div class="mobile-navbar-toggle py-3" style="font-family: 'Roboto', sans-serif;" >
+  <nav class="navbar navbar-expand-md navbar-light ftco_navbar ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.php"></a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <i class="fa fa-bars"></i> MENU
+	      </button>
 
-    
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+				<?php 
+					if(isset($_SESSION['username'])) {
+						?>
+						<li class="nav-item"><a href="/admin/index.php" class="nav-link">Admin</a></li>
+						<?php
+					} 
+				?>				
+			  	<li class="nav-item"><a href="<?php echo redirect_navBarURL('#section-background'); ?>" class="nav-link">Background</a></li>
+            	<li class="nav-item"><a href="<?php echo redirect_navBarURL('#section-skills'); ?>" class="nav-link">Skills</a></li>
+            	<li class="nav-item"><a href="<?php echo redirect_navBarURL('#section-featured-projects'); ?>" class="nav-link">Projects</a></li>
+	          	<li class="nav-item"><a href="<?php echo redirect_navBarURL('#section-articles'); ?>" class="nav-link">Blog</a></li>
+	          	<li class="nav-item"><a href="mailto: hello@koicha.dev" class="nav-link">Contact Me</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+</div><!-- container -->

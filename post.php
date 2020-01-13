@@ -1,15 +1,13 @@
+<?php 
+    include_once "includes/header.php";
+    include_once "includes/navbar.php"; 
+?> 
+    <div class="space" style="height: 3.25rem;"></div>
 
-<!-- Header  -->
-<?php include_once "./includes/header.php";?>
-<!-- Navigation Bar -->
-<?php include_once "./includes/navbar.php"; ?>
-
-<body>
-    <!-- Page Content -->
-    <div class="container">
-        <div class="row">
+    <div class="container d-md-flex align-items-stretch">
+        <!-- Page Content  -->
+        <div id="content" class="row ">
             <!-- Blog Entries Column -->
-            <div class="col-md-8">    
             <?php 
                 if(isset($_GET['p_id'])) {
                     $post_id = $_GET['p_id'];
@@ -33,34 +31,37 @@
                     $post_title = $row['post_title'];
                     $post_author = $row['post_author'];
                     $post_date = $row['post_date'];
-                    $post_img = $row['post_image'];
+                    $post_image = $row['post_image'];
                     $post_content = $row['post_content'];
+                    $post_status = $row['post_status'];
 
-                    ?>
-
-                <!-- First Blog Post -->
-                <h1>
-                    <?php echo $post_title; ?>
-                </h1>
+                    if($post_status === "published") { 
+                ?>
+                <div class="col-sm-12 col-md-11 col-lg-11 col-xl-11">
+                 <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb" style="background: none; font-weight: bold;">
+                        <li class="breadcrumb-item ml-n3"><a href="../../../index.php">Home</a></li>
+                        <li class="breadcrumb-item"><a href="blog.php">Blog</a></li>
+                        <li class="breadcrumb-item active" aria-current="page"><?php echo $post_title; ?></li>
+                    </ol>
+                </nav> <!-- nav breadcrumb -->    
+                <h1 class="ml-n1"><?php echo $post_title; ?></h1>
                 <p class="lead">
                     <small>By <a href="index.php"><?php echo $post_author; ?></a></small>
                 </p>
                 <p><span class="glyphicon glyphicon-time"></span> Posted on <?php echo $post_date; ?></p>
                 <hr>
-                <img class="img-responsive" src="./img/<?php echo $post_img; ?>" alt="">
-                <hr>
+                    <img src="img/<?php echo $post_image; ?>"  class="card-img-top" alt="...">
                 <p><?php echo $post_content; ?></p>
-                <hr>                
+                </div>
                 <?php
+                     }
                 }
             } else {
                 header("Location: index.php");
-            }
-                ?>
-                <!-- Blog Comments -->
-                <?php include "./includes/comments.php"; ?>
-                </div>
-                    <!-- Blog Sidebar Widgets Column -->
-                <?php include_once './includes/sidebar.php'; ?>
-        </div>
-<?php include_once './includes/footer.php'; ?>
+            } ?>
+        </div><!-- content -->
+        <?php include_once "includes/widgets/sidebar.php" ?>
+    </div><!-- container -->  
+
+<?php include_once "includes/footer.php"; ?>
