@@ -10,7 +10,7 @@
       <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 pl-4 p-3 ">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb" style="background: none; font-weight: bold;">
-            <li class="breadcrumb-item"><a href="index.php">&nbsp;&nbsp;&nbsp;Home</a></li>
+            <li class="breadcrumb-item"><a href="../../../index.php">&nbsp;&nbsp;&nbsp;Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">Blog</li>
           </ol>
        </nav> <!-- nav breadcrumb -->

@@ -40,7 +40,7 @@
                 <div class="col-sm-12 col-md-11 col-lg-11 col-xl-11">
                  <nav aria-label="breadcrumb">
                     <ol class="breadcrumb" style="background: none; font-weight: bold;">
-                        <li class="breadcrumb-item ml-n3"><a href="index.php">Home</a></li>
+                        <li class="breadcrumb-item ml-n3"><a href="../../../index.php">Home</a></li>
                         <li class="breadcrumb-item"><a href="blog.php">Blog</a></li>
                         <li class="breadcrumb-item active" aria-current="page"><?php echo $post_title; ?></li>
                     </ol>

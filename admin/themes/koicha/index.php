@@ -209,7 +209,7 @@
                             <p class="card-text"><?php echo  $post_content; ?></p>
                         </div>
                         <div class="card-footer text-center">
-                            <a href="post.php?p_id=<?php echo $post_id; ?>" class="btn btn-primary">Read More</a>
+                            <a href="/admin/themes/koicha/post.php?p_id=<?php echo $post_id; ?>" class="btn btn-primary">Read More</a>
                         </div>
                     </div>
                 </div>
