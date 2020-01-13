@@ -5,11 +5,6 @@
 
         <div id="page-wrapper">
             <div class="container-fluid">
-                <?php
-                //echo getcwd(); 
-               // print_r(scandir("themes"));                
-
-                ?>
                 <h3>Themes</h3>
                 <div class="row">
                     <form action="" method="POST">
@@ -22,7 +17,8 @@
         $result = mysqli_query($connection, $query);
 
         $query = "UPDATE themes SET theme_value = 1 WHERE theme_id = $get_theme_id";
-        $result = mysqli_query($connection, $query);       
+        $result = mysqli_query($connection, $query);    
+        header("Location: /admin/themes.php");   
     }
 
     $query = "SELECT * FROM themes";

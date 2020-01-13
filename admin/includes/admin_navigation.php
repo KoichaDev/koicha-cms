@@ -13,7 +13,27 @@
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
                 <li>
-                    <a href="../"> <i class="fa fa-home"></i> Visit Website</a>
+                    <?php 
+                        $query = "SELECT * FROM themes WHERE theme_value = 1";
+                        $result = mysqli_query($connection, $query);
+                        while($row = mysqli_fetch_assoc($result)) {
+                            $theme_name = $row['theme_name'];
+                            $theme_value = $row['theme_value'];
+                        }
+                        switch($theme_name) {
+                        case 'Sbootstrap':?> 
+                            <a href="/sbootstrap.php"> <i class="fa fa-home"></i> Visit Website</a>
+                            <?php
+                        break;
+                        case 'Koicha': ?>
+                            <a href="themes/koicha/index.php"> <i class="fa fa-home"></i> Visit Website</a>
+                            <?php
+                        break;
+                        default: 
+                            echo 'Nolpe!';
+                        break;
+                    }
+                    ?>
                 </li> 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo $_SESSION['firstname'];?>&nbsp;<?php echo $_SESSION['lastname'] ?> <b class="caret"></b></a>

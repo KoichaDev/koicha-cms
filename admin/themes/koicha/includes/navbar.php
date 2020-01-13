@@ -8,6 +8,13 @@
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
+				<?php 
+					if(isset($_SESSION['username'])) {
+						?>
+						<li class="nav-item"><a href="/admin/index.php" class="nav-link">Admin</a></li>
+						<?php
+					} 
+				?>				
 			  	<li class="nav-item"><a href="<?php echo redirect_navBarURL('#section-background'); ?>" class="nav-link">Background</a></li>
             	<li class="nav-item"><a href="<?php echo redirect_navBarURL('#section-skills'); ?>" class="nav-link">Skills</a></li>
             	<li class="nav-item"><a href="<?php echo redirect_navBarURL('#section-featured-projects'); ?>" class="nav-link">Projects</a></li>

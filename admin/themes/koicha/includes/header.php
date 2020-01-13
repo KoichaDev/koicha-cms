@@ -1,6 +1,22 @@
 <?php 
     include_once "../../../includes/config.php"; 
     include_once "help_functions.php";
+
+    // This will output the buffering. We need to use it for redirecting users, or pieces of coding or application
+    // This function is buffering our request in the headers of the script, so when we are done with the script. 
+    // It will send everything at the same time
+    ob_start(); 
+    session_start();
+
+    // Checking if the person who logs in is a admin or a subscriber
+    // IF the user is not admin, then it will be forced to redirect to the homepage site only
+    if(!isset($_SESSION['user_role'])) {
+        header("Location: ../index.php");
+    } else {
+        if($_SESSION['user_role'] !== 'admin') { 
+            header("Location: ../index.php");
+        }
+    }
 ?>
 
 <!DOCTYPE html>
