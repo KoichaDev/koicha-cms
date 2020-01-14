@@ -36,7 +36,7 @@
                     You can read <strong><a href="blog.php">my blog </a></strong> input of the web technology.👍 
                 </p>
                 <p>
-                    <b>During my spare time</b>, I usually go to the gym, hanging out with friends, playing video games, or try to experience by cooking awesome food. 
+                    <b>During my spare time</b>, I usually go to the gym, hanging out with friends, playing video games, or cooking awesome foods. 
                 </p>
             </div>
         </div><!-- row -->
