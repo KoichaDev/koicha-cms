@@ -19,7 +19,7 @@
 </header>
 
 <section class="section-background" id="section-background">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col-xl-3 mx-auto">
                 <h4 style="color: #0096FF;" class="float-md-left float-lg-left float-xl-right">Background </h4>

@@ -1,7 +1,7 @@
 <div class="mobile-navbar-toggle py-3" style="font-family: 'Roboto', sans-serif;" >
   <nav class="navbar navbar-expand-md navbar-light ftco_navbar ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.php"></a>
+	      <a class="navbar-brand d-lg-none d-xl-none" href="index.php">Koicha.dev</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <i class="fa fa-bars"></i> MENU
 	      </button>
