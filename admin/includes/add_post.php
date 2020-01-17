@@ -100,11 +100,8 @@
         <input type="text" name="post_tags" id="post_tags" class="form-control">
     </div>
     <div class="form-group">
-        <label for="post_content">Post Content</label>
-        
-        <div id="editor">
-            <textarea type="text" name="post_content" id="post_content" class="form-control editor" cols="30" rows="10"></textarea>
-        </div>
+        <label for="editor">Post Content</label>
+        <div name="post_content" id="editor"></div>
     </div>
     <input type="submit" name="create_post" class="btn btn-primary" value="Publish Post">
 </form>
