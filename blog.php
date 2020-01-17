@@ -10,7 +10,7 @@
       <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 pl-4 p-3 ">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb" style="background: none; font-weight: bold;">
-            <li class="breadcrumb-item"><a href="index.php">&nbsp;&nbsp;&nbsp;Home</a></li>
+            <li class="breadcrumb-item"><a href="/">&nbsp;&nbsp;&nbsp;Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">Blog</li>
           </ol>
        </nav> <!-- nav breadcrumb -->
@@ -57,7 +57,7 @@
         // This number will give us amount of post that will be displayed per pagination
         $count = ceil($count / $display_posts_per_page);
 
-        $query = "SELECT * FROM post ORDER BY post_id ASC LIMIT $page_1, $display_posts_per_page";
+        $query = "SELECT * FROM post ORDER BY post_id DESC LIMIT $page_1, $display_posts_per_page";
         $result = mysqli_query($connection, $query);
         while($row = mysqli_fetch_assoc($result)) {
           $post_id = $row['post_id'];
