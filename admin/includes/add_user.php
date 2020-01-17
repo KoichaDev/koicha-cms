@@ -10,7 +10,7 @@
         $user_image = $_FILES['image']['name'];
         $user_image_temp = $_FILES['image']['tmp_name'];
 
-        $hash_created = password_hash($user_password, PASSWORD_ARGON2ID);
+        $hash_created = password_hash($user_password, PASSWORD_BCRYPT);
         
         
         // PHP In built function. We have to use temporarily post image to display on the web what file it is
