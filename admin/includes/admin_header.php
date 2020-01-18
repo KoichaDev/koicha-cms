@@ -53,15 +53,14 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <!-- TinyMCE -->
+    <script src="https://cdn.tiny.cloud/1/n0g8jh52vlyzv163ahyutpg7xeafbvkoc63ceoqt59c8m7de/tinymce/5/tinymce.min.js" referrerpolicy="origin">></script>
+
+    <!-- Prism Script for syntax highlighter -->
+    <link rel="stylesheet" type="text/css" href="prism.css">
+    <script src="prism.js"></script>
     
-    <!-- Main Quill library -->
-    <script src="//cdn.quilljs.com/1.3.6/quill.js"></script>
-    <script src="//cdn.quilljs.com/1.3.6/quill.min.js"></script>
-
-    <!-- Theme included stylesheets -->
-    <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-    <link href="//cdn.quilljs.com/1.3.6/quill.bubble.css" rel="stylesheet">
-
     <!-- Google's Material column charts API-->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     
@@ -69,6 +68,6 @@
     <script src="./js/posts.js" defer></script>
     <script src="./js/users.js" defer></script>
     <script src="./js/modal.js" defer></script>
-    <script src="js/quill.js" defer></script>
+    <script src="./js/tinyMCE.js" defer></script>
 
 </head>

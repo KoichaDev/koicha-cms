@@ -1,1 +1,0 @@
-// document.querySelectorAll('.tox.tox-silver-sink.tox-tinymce-aux')[0].style.display = "none";

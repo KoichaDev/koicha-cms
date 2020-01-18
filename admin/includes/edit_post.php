@@ -124,8 +124,8 @@
         <input type="text" name="post_tags" id="post_tags" class="form-control" value="<?php echo $post_tags; ?>">
     </div>
     <div class="form-group">
-        <label for="post_content">Post Content</label>
-        <textarea type="text" name="post_content" id="post_content" class="form-control" cols="30" rows="30"><?php echo $post_content; ?></textarea>
+        <label for="codesample">Post Content</label>
+        <textarea name="post_content" class="form-control" id="codesample" cols="30" rows="10"><?php echo $post_content; ?></textarea>
     </div>
     <input type="submit" name="update_post" class="btn btn-primary" value="Update Post">
 </form>
