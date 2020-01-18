@@ -31,6 +31,10 @@
         <!-- Animation CSS -->
         <link rel="stylesheet" href="css/animation.css">
 
+        <!-- Prism SyntaxHighlighter -->
+        <link rel="stylesheet" href="css/prism.css">
+        <script src="/js/prism.js" defer></script>
+
         <!-- Google Fonts API -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
         

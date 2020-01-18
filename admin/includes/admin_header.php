@@ -56,10 +56,6 @@
 
     <!-- TinyMCE -->
     <script src="https://cdn.tiny.cloud/1/n0g8jh52vlyzv163ahyutpg7xeafbvkoc63ceoqt59c8m7de/tinymce/5/tinymce.min.js" referrerpolicy="origin">></script>
-
-    <!-- Prism Script for syntax highlighter -->
-    <link rel="stylesheet" type="text/css" href="prism.css">
-    <script src="prism.js"></script>
     
     <!-- Google's Material column charts API-->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>

@@ -101,7 +101,7 @@
     </div>
     <div class="form-group">
         <label for="codesample">Post Content</label>
-        <textarea name="post_content" class="form-control" id="codesample" cols="30" rows="10"></textarea>
+        <textarea name="post_content" class="form-control" id="codesample" cols="30" rows="50"></textarea>
     </div>
     <input type="submit" name="create_post" class="btn btn-primary" value="Publish Post">
 </form>
