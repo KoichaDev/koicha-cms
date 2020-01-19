@@ -125,7 +125,7 @@
     </div>
     <div class="form-group">
         <label for="codesample">Post Content</label>
-        <textarea name="post_content" class="form-control" id="codesample" cols="30" rows="10"><?php echo $post_content; ?></textarea>
+        <textarea name="post_content" class="form-control" id="codesample" cols="30" rows="50"><?php echo $post_content; ?></textarea>
     </div>
     <input type="submit" name="update_post" class="btn btn-primary" value="Update Post">
 </form>
