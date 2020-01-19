@@ -1,8 +1,8 @@
 <nav id="sidebar" style="border-left: transparent;">
     <div class="container-fluid">
-        <h3 class="py-3">📰 Recent Post 📰</h3>
+        <h3 class="py-3">📰 Recent Post</h3>
         <?php 
-            $query = "SELECT * FROM post ORDER BY post_id ASC";
+            $query = "SELECT * FROM post ORDER BY post_id DESC";
             $result = mysqli_query($connection, $query);
             while($row = mysqli_fetch_assoc($result)) {
             $post_title = $row['post_title'];
