@@ -5,6 +5,7 @@
             $query = "SELECT * FROM post ORDER BY post_id DESC";
             $result = mysqli_query($connection, $query);
             while($row = mysqli_fetch_assoc($result)) {
+            $post_id = $row['post_id'];
             $post_title = $row['post_title'];
             $post_image = $row['post_image'];
             $post_status = $row['post_status'];
@@ -20,7 +21,7 @@
                     </div> <!-- col -->
                     <div class="col-12 col-sm-6 col-md-12 col-lg-6">
                     <h6 class="mb-1">
-                        <a href="" title=""><?php echo $post_title; ?></a>
+                        <a href="post.php?p_id=<?php echo $post_id; ?>" title=""><?php echo $post_title; ?></a>
                     </h6>
                     </div>
                 </div><!-- row -->
