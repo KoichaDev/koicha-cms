@@ -38,7 +38,7 @@ if (window.location.pathname === '/admin/posts.php') {
         {text: 'PHP', value: 'php'},
     ],
     plugins: 'a11ychecker advcode casechange codesample formatpainter linkchecker image lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker',
-    toolbar: 'a11ycheck addcomment showcomments casechange codesample checklist image code formatpainter insertfile pageembed permanentpen table',
+    toolbar: 'a11ycheck addcomment showcomments numlist bullist casechange codesample checklist image code formatpainter insertfile pageembed permanentpen table',
     content_css: [
       "https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism-tomorrow.min.css",
       "https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/line-numbers/prism-line-numbers.css",
