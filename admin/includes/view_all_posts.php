@@ -96,8 +96,8 @@
                 <th>ID</th>
                 <th>Author</th>
                 <th>Title</th>
-                <th>Category</th>
                 <th>Status</th>
+                <th>Category</th>
                 <th>Image</th>
                 <th>Tags</th>
                 <th>Comments</th>
