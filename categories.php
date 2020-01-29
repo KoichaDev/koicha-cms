@@ -50,6 +50,8 @@
                     $post_date = $row['post_date'];
                     $post_image = $row['post_image'];
                     $post_content = substr($row['post_content'], 0, 300);
+                    // 130 is average words per minute (wpm)
+                    $min_to_read = number_format($row['post_word_count']/130);
                     ?>          
 
                     <div class="col-md-12 col-lg-12 col-xl-6 py-3">
@@ -57,7 +59,9 @@
                         <img src="img/<?php echo $post_image; ?>"  class="card-img-top" alt="...">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title"><?php echo $post_title; ?></h5>
-                            <p class="card-text"><?php echo $post_content; ?></p>
+                            <br>
+                            <small class="text-center"><?php echo $min_to_read; ?> minutes to read </small>
+                            <br>
                             <a href="post.php?p_id=<?php echo $post_id; ?>" class="mt-auto btn btn-lg btn-block btn-outline-primary">Read More</a>
                         </div><!-- card-body -->
                         </div><!-- card -->

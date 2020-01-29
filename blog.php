@@ -67,7 +67,7 @@
           $post_content = substr($row['post_content'], 0, 250);
           $post_status = $row['post_status'];
           // 130 is average words per minute (wpm)
-          $min_to_read = number_format($row['post_word_count']/130) ;
+          $min_to_read = number_format($row['post_word_count']/130);
           // Checking if the post is published status or not
           if($post_status === "published") {
           ?>
