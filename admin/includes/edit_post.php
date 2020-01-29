@@ -17,6 +17,8 @@
         $post_tags = $row['post_tags'];
         $post_comments_count = $row['post_comment_count'];
         $post_date = $row['post_date'];
+        $post_word_count = $row['post_word_count'];
+
     }
 
     // Updating the post 
@@ -31,6 +33,8 @@
         
         $post_tags = $_POST['post_tags'];
         $post_content = $_POST['post_content'];
+
+        $post_word_count = $_POST['post_word_count'];
         
         // PHP In built function. We have to use temporarily post image to display on the web what file it is
         // $post_image will upload to the final destination
@@ -58,10 +62,11 @@
                   post_content = ?, 
                   post_tags = ?, 
                   post_comment_count = ?, 
-                  post_status = ?
+                  post_status = ?,
+                  post_word_count = ?
                   WHERE post_id = ?"; 
         $stmt = mysqli_prepare($connection, $query);
-        mysqli_stmt_bind_param($stmt, "isssssisi", $post_category_id, $post_title, $post_author, $post_image, $post_content, $post_tags, $post_comment_count, $post_status, $post_id);
+        mysqli_stmt_bind_param($stmt, "isssssisii", $post_category_id, $post_title, $post_author, $post_image, $post_content, $post_tags, $post_comment_count, $post_status, $post_word_count, $post_id);
         if(!mysqli_stmt_execute($stmt)) {
             die('QUERY FAILED .' . mysqli_error($connection));
         }
@@ -118,6 +123,10 @@
         <label for="post-image">Post Image</label>
         <img width='100' src="../img/<?php echo $post_image; ?>" alt ="Image">
         <input type="file" name="image" id="post-image">
+    </div>
+    <div class="form-group">
+        <label for="post-word-count">Word Count</label>
+        <input type="text" name="post_word_count" id="post-word-count" class="form-control" value="<?php echo $post_word_count; ?>">
     </div>
     <div class="form-group">
         <label for="post_tags">Post Tags</label>

@@ -33,12 +33,13 @@ if (window.location.pathname === '/admin/posts.php') {
     },
     codesample_languages: [
         {text: 'HTML/XML', value: 'markup'},
+        {text: 'JSX', value: 'jsx'},
         {text: 'JavaScript', value: 'javascript'},
         {text: 'CSS', value: 'css'},
         {text: 'PHP', value: 'php'},
     ],
-    plugins: 'a11ychecker advcode casechange codesample emoticons formatpainter linkchecker image lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker',
-    toolbar: 'a11ycheck addcomment emoticons showcomments numlist bullist casechange codesample checklist image code formatpainter insertfile pageembed permanentpen table',
+    plugins: 'a11ychecker advcode casechange codesample emoticons formatpainter linkchecker image lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker wordcount',
+    toolbar: 'a11ycheck emoticons numlist bullist casechange codesample checklist image code formatpainter insertfile pageembed permanentpen table wordcount',
     content_css: [
       "https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism-tomorrow.min.css",
       "https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/line-numbers/prism-line-numbers.css",

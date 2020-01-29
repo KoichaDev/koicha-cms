@@ -11,15 +11,16 @@
         $post_tags = $_POST['post_tags'];
         $post_content = $_POST['post_content'];
         $post_date = date('d-m-y');
+        $post_word_count = $_POST['post_word_count'];
         
         // PHP In built function. We have to use temporarily post image to display on the web what file it is
         // $post_image will upload to the final destination
         move_uploaded_file($post_image_temp, "../img/$post_image"); 
         // now() is a function for SQL to get the current date time today
-        $query = "INSERT INTO post(post_category_id, post_title, post_author, post_date, post_image, post_content, post_tags, post_status) 
-                  VALUES(?, ?, ?, now(), ?, ?, ?, ?)";
+        $query = "INSERT INTO post(post_category_id, post_title, post_author, post_date, post_image, post_content, post_tags, post_status, post_word_count) 
+                  VALUES(?, ?, ?, now(), ?, ?, ?, ?, ?)";
         $stmt = mysqli_prepare($connection, $query);
-        mysqli_stmt_bind_param($stmt, "issssis", $post_category_id, $post_title, $post_author, $post_image, $post_content, $post_tags, $post_status);
+        mysqli_stmt_bind_param($stmt, "issssisi", $post_category_id, $post_title, $post_author, $post_image, $post_content, $post_tags, $post_status, $post_word_count);
         if(!mysqli_stmt_execute($stmt)) {
             die('QUERY FAILED .' . mysqli_error($connection));
         }
@@ -94,6 +95,10 @@
     <div class="form-group">
         <label for="post_image">Post Image</label>
         <input type="file" name="image" id="post_image">
+    </div>
+    <div class="form-group">
+        <label for="post-word-count">Word Count</label>
+        <input type="text" name="post_word_count" id="post-word-count" class="form-control">
     </div>
     <div class="form-group">
         <label for="post_tags">Post Tags</label>
