@@ -198,15 +198,19 @@
         $post_img = $row['post_image'];
         $post_content = substr($row['post_content'], 0, 250);
         $post_status =  $row['post_status'];
+        // 130 is average words per minute (wpm)
+        $min_to_read = number_format($row['post_word_count']/130);
         // Will display the posts if the post status is "published"
         if($post_status === "published") {
         ?>
                 <div class="card-group col-md-4 mb-5">
                         <div class="card d-flex flex-column">
                         <img class="card-img-top" class="img-thumbnail" src="img/<?php echo $post_img; ?>" alt="">
-                        <div class="card-body">
-                            <h4 class="card-title text-center"><?php echo $post_title; ?></h4>
-                            <p class="card-text"><?php echo  $post_content; ?></p>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title text-center"><?php echo $post_title; ?></h5>
+                            <br>
+                            <small class="text-center text-muted"><?php echo $min_to_read; ?> minutes to read </small>
+                            <br>
                         </div>
                         <a href="post.php?p_id=<?php echo $post_id; ?>" class="mt-auto btn btn-lg btn-block btn-outline-primary">Read More</a>
                     </div>
